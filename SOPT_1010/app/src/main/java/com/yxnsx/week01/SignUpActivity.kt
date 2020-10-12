@@ -33,6 +33,8 @@ class SignUpActivity : AppCompatActivity() {
             Toast.makeText(this, "모든 폼을 입력해주세요.", Toast.LENGTH_SHORT).show()
 
         } else { // 모든 폼이 입력되었을 경우,
+            // 토스트 메시지 츨력
+            Toast.makeText(this, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show()
             // LogInActivity로 되돌아가는 인텐트 설정
             val intent = Intent(this, LogInActivity::class.java)
 
