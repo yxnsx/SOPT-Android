@@ -1,6 +1,6 @@
 ## :fire: 1주차 세미나: View와 ViewGroup
 #### :heavy_check_mark: 과제 완료일: 20/10/12
-<img width="1154" alt="스크린샷 2020-10-12 오후 11 20 20" src="https://user-images.githubusercontent.com/47806943/95757010-872d4d00-0ce1-11eb-920b-1a9b09779a53.png">
+<img width="1200" alt="스크린샷 2020-10-12 오후 11 48 50" src="https://user-images.githubusercontent.com/47806943/95760069-8ac2d300-0ce5-11eb-8e99-eeed98e8ea8d.png">
 
 #### :heavy_check_mark: 필수 과제: `SignUpActivity` 만들기
 * 회원가입 완료 클릭 이벤트 구현하기
