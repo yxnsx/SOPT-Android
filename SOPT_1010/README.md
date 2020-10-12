@@ -10,7 +10,7 @@
 * 모든 `EditText`에 Hint 넣기
 <br>
 
-`SignUpActivity.kt`
+`필수 과제 구현 코드 - SignUpActivity.kt`
 ```kotlin
 private val onClickListener = View.OnClickListener() {
     when (it) {
@@ -50,7 +50,7 @@ fun checkValidation() {
 * 회원 가입시 입력한 아이디와 비밀번호가 입력되어 있도록 하기
 <br>
 
-`LogInActivity.kt`
+`성장 과제 1 구현 코드 - LogInActivity.kt`
 ```kotlin
 override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
     super.onActivityResult(requestCode, resultCode, data)
@@ -79,7 +79,7 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
 * 자동 로그인이 될 경우 `Toast` 메시지 출력하기
 <br>
 
-`LogInActivity.kt`
+`성장 과제 2 구현 코드 - LogInActivity.kt`
 ```kotlin
 override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
