@@ -5,8 +5,8 @@
 
 #### :heavy_check_mark: 필수 과제: `SignUpActivity` 만들기
 * 회원가입 완료 클릭 이벤트 구현하기
-* 모든 `EditText`에 데이터가 있을 경우 -> 회원가입 완료 `Toast` 메시지 띄우기
-* 하나라도 없을 경우 -> 빈 칸이 있다는 `Toast` 메시지 띄우기
+* 모든 `EditText`에 데이터가 있을 경우, 회원가입 완료 `Toast` 메시지 띄우기
+* `EditText`에 데이터가 하나라도 없을 경우, 빈 칸이 있다는 `Toast` 메시지 띄우기
 * 비밀번호 `EditText`의 입력 내용 숨기기
 * 모든 `EditText`에 Hint 넣기
 <br>
