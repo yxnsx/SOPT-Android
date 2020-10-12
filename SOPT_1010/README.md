@@ -1,4 +1,5 @@
 ## :fire: 1주차 세미나: View와 ViewGroup
+#### :heavy_check_mark: 세미나 일자: 2020/10/10
 #### :heavy_check_mark: 과제 완료일: 2020/10/12
 <img width="1200" alt="스크린샷 2020-10-12 오후 11 48 50" src="https://user-images.githubusercontent.com/47806943/95760069-8ac2d300-0ce5-11eb-8e99-eeed98e8ea8d.png">
 
