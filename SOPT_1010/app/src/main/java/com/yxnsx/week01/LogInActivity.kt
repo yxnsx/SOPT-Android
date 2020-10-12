@@ -77,8 +77,6 @@ class LogInActivity : AppCompatActivity() {
             when (requestCode) {
 
                 REQUEST_SIGNUP -> {
-                    Toast.makeText(this, "회원가입에 성공했습니다.", Toast.LENGTH_SHORT).show()
-
                     // 넘어온 인텐트에서 데이터 가져오기
                     val userId = data?.getStringExtra("userId")
                     val userPassword = data?.getStringExtra("userPassword")
