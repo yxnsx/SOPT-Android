@@ -35,10 +35,12 @@ class SignUpActivity : AppCompatActivity() {
         } else { // 모든 폼이 입력되었을 경우,
             // LogInActivity로 되돌아가는 인텐트 설정
             val intent = Intent(this, LogInActivity::class.java)
+
+            // 인텐트로 넘길 데이터 설정
+            intent.putExtra("userName", editText_name.text.toString())
             intent.putExtra("userId", editText_id.text.toString())
             intent.putExtra("userPassword", editText_password.text.toString())
             setResult(Activity.RESULT_OK, intent)
-
             finish()
         }
     }
