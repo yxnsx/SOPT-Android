@@ -3,21 +3,20 @@ package com.yxnsx.sopt_1017
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_home.*
 
-class MainActivity : AppCompatActivity() {
-
+class HomeActivity : AppCompatActivity() {
     private lateinit var profileAdapter: ProfileAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_home)
 
         profileAdapter = ProfileAdapter(this)
 
         recyclerView.apply {
             adapter = profileAdapter
-            layoutManager = LinearLayoutManager(this@MainActivity)
+            layoutManager = LinearLayoutManager(this@HomeActivity)
         }
 
         profileAdapter.dataList = mutableListOf(
