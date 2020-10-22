@@ -1,37 +1,47 @@
 package com.yxnsx.sopt_1017
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
+import androidx.activity.viewModels
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_home.*
+import com.yxnsx.sopt_1017.databinding.ActivityHomeBinding
 
-class HomeActivity : AppCompatActivity() {
-    private lateinit var profileAdapter: ProfileAdapter
+
+class HomeActivity : AppCompatActivity(), ProfileItemListener {
+
+    private lateinit var viewBinding: ActivityHomeBinding
+    private val profileListViewModel: ProfileListViewModel by viewModels()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
 
-        profileAdapter = ProfileAdapter(this)
+        // viewBinding 설정
+        viewBinding = ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(viewBinding.root)
 
-        recyclerView.apply {
-            adapter = profileAdapter
-            layoutManager = LinearLayoutManager(this@HomeActivity)
+        // recyclerView 설정
+        viewBinding.recyclerView.apply {
+            adapter = ProfileAdapter(emptyList(), this@HomeActivity)
+            layoutManager = LinearLayoutManager(context)
         }
 
-        profileAdapter.dataList = mutableListOf(
-            ProfileData("이름", "최윤소"),
-            ProfileData("나이", "25"),
-            ProfileData("파트", "안드로이드"),
-            ProfileData("github", "https://github.com/yxnsx"),
-            ProfileData("SOPT", "www.sopt.org"),
-            ProfileData("이름", "최윤소"),
-            ProfileData("나이", "25"),
-            ProfileData("파트", "안드로이드"),
-            ProfileData("github", "https://github.com/yxnsx"),
-            ProfileData("SOPT", "www.sopt.org")
-        )
+        // 뷰모델의 Observer를 통해 리사이클러뷰의 ProfileAdapter에 변경값 갱신
+        profileListViewModel.profileLiveData.observe(this, Observer {
+            (viewBinding.recyclerView.adapter as ProfileAdapter).setLiveData(it)
+        })
+    }
 
-        profileAdapter.notifyDataSetChanged()
+    override fun onClickProfileItem(view: View, profileData: ProfileData) {
+
+        val intent = Intent(this, ProfileDetailActivity::class.java)
+        intent.putExtra("profileData", profileData)
+        startActivity(intent)
+
+        Toast.makeText(this, "click item", Toast.LENGTH_SHORT).show()
     }
 }
