@@ -1,25 +1,42 @@
 package com.yxnsx.sopt_1017
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 
-class ProfileAdapter(private val context: Context) : RecyclerView.Adapter<ProfileViewHolder>() {
 
-    var dataList = mutableListOf<ProfileData>()
+class ProfileAdapter(
+    private var dataList: List<ProfileData>,
+    private val profileItemListener: ProfileItemListener
+) : RecyclerView.Adapter<ProfileViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProfileViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_recycler_view, parent, false)
-        return ProfileViewHolder(view)
+        return ProfileViewHolder(
+            DataBindingUtil.inflate(
+                LayoutInflater.from(parent.context),
+                R.layout.item_recycler_view,
+                parent,
+                false
+            )
+        )
     }
 
     override fun getItemCount(): Int {
         return dataList.size
     }
 
-    override fun onBindViewHolder(holderViewHolder: ProfileViewHolder, position: Int) {
-        holderViewHolder.onBind(dataList[position])
+    override fun onBindViewHolder(profileViewHolder: ProfileViewHolder, position: Int) {
+
+        profileViewHolder.apply {
+            onBind(dataList[position])
+            profileItemListener.onClickProfileItem(this.itemBinding.root, dataList[position])
+        }
+    }
+
+    fun setLiveData(newData: List<ProfileData>) {
+        dataList = newData
+        notifyDataSetChanged()
     }
 }
