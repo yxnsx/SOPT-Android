@@ -3,10 +3,10 @@ package com.yxnsx.sopt_1017
 import androidx.recyclerview.widget.RecyclerView
 import com.yxnsx.sopt_1017.databinding.ItemRecyclerViewBinding
 
-class ProfileViewHolder(val itemBinding: ItemRecyclerViewBinding) :
-    RecyclerView.ViewHolder(itemBinding.root) {
+class ProfileViewHolder(val dataBinding: ItemRecyclerViewBinding) :
+    RecyclerView.ViewHolder(dataBinding.root) {
 
     fun onBind(profileData: ProfileData) {
-        itemBinding.profile = profileData
+        dataBinding.profile = profileData
     }
 }
