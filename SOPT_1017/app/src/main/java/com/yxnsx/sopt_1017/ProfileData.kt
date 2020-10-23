@@ -7,5 +7,7 @@ import kotlinx.android.parcel.Parcelize
 data class ProfileData(
     var image: Int,
     var title: String,
-    var subTitle: String
+    var subTitle: String,
+    var date: String,
+    var description: String
 ): Parcelable
