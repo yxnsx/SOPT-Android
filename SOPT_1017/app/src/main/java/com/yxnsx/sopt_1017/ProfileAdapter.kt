@@ -31,9 +31,12 @@ class ProfileAdapter(
 
         profileViewHolder.apply {
             onBind(dataList[position])
-            profileItemListener.onClickProfileItem(this.itemBinding.root, dataList[position])
+            dataBinding.root.setOnClickListener {
+                profileItemListener.onClickProfileItem(it, dataList[position])
+            }
         }
     }
+
 
     fun setLiveData(newData: List<ProfileData>) {
         dataList = newData
