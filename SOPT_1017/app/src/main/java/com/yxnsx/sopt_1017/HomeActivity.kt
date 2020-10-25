@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yxnsx.sopt_1017.databinding.ActivityHomeBinding
 
@@ -29,11 +30,31 @@ class HomeActivity : AppCompatActivity(), ProfileItemListener {
             adapter = ProfileAdapter(emptyList(), this@HomeActivity)
             layoutManager = LinearLayoutManager(context)
         }
+        viewBinding.FABGridLayout.setOnClickListener(onClickListener)
 
         // 뷰모델의 Observer를 통해 리사이클러뷰의 ProfileAdapter에 변경값 갱신
         profileListViewModel.profileLiveData.observe(this, Observer {
             (viewBinding.recyclerView.adapter as ProfileAdapter).setLiveData(it)
         })
+    }
+
+    private val onClickListener = View.OnClickListener {
+        when (it.id) {
+            viewBinding.FABGridLayout.id ->
+                setLayoutStatus()
+        }
+    }
+
+    private fun setLayoutStatus() {
+        viewBinding.apply {
+            if (recyclerView.layoutManager is GridLayoutManager) {
+                recyclerView.layoutManager = LinearLayoutManager(this@HomeActivity)
+                FABGridLayout.setImageResource(R.drawable.icon_grid)
+            } else {
+                recyclerView.layoutManager = GridLayoutManager(this@HomeActivity, 2)
+                FABGridLayout.setImageResource(R.drawable.icon_list)
+            }
+        }
     }
 
     override fun onClickProfileItem(view: View, profileData: ProfileData) {
