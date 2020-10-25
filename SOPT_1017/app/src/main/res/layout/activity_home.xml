@@ -15,4 +15,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/FAB_gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/icon_grid"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerView" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
