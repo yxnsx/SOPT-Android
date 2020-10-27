@@ -6,7 +6,7 @@
 
         <variable
             name="profile"
-            type="com.yxnsx.sopt_1017.ProfileData" />
+            type="com.yxnsx.sopt_1017.week_02.ProfileData" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -1,4 +1,4 @@
-package com.yxnsx.sopt_1017
+package com.yxnsx.sopt_1017.week_02
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.MotionEvent
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.yxnsx.sopt_1017.*
 
 
 class ProfileAdapter(

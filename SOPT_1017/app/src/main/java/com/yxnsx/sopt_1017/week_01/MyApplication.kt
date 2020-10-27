@@ -1,4 +1,4 @@
-package com.yxnsx.sopt_1017
+package com.yxnsx.sopt_1017.week_01
 
 import android.app.Application
 
@@ -9,7 +9,8 @@ public class MyApplication : Application() {
     }
 
     override fun onCreate() {
-        mySharedPreferences = MySharedPreferences(applicationContext)
+        mySharedPreferences =
+            MySharedPreferences(applicationContext)
         super.onCreate()
     }
 }

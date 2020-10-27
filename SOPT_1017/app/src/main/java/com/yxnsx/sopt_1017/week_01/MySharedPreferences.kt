@@ -1,4 +1,4 @@
-package com.yxnsx.sopt_1017
+package com.yxnsx.sopt_1017.week_01
 
 import android.content.Context
 import android.content.SharedPreferences

@@ -1,4 +1,4 @@
-package com.yxnsx.sopt_1017
+package com.yxnsx.sopt_1017.week_02
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -1,20 +1,23 @@
-package com.yxnsx.sopt_1017
+package com.yxnsx.sopt_1017.week_02
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.yxnsx.sopt_1017.*
 import com.yxnsx.sopt_1017.databinding.ActivityHomeBinding
 
 
-class HomeActivity : AppCompatActivity(), ProfileItemClickListener, ProfileItemDragListener, ProfileItemActionListener {
+class HomeActivity : AppCompatActivity(),
+    ProfileItemClickListener,
+    ProfileItemDragListener,
+    ProfileItemActionListener {
 
     private val dataList = mutableListOf<ProfileData>()
     private lateinit var viewBinding: ActivityHomeBinding
@@ -35,11 +38,19 @@ class HomeActivity : AppCompatActivity(), ProfileItemClickListener, ProfileItemD
 
         // recyclerView 설정
         viewBinding.recyclerView.apply {
-            adapter = ProfileAdapter(dataList, this@HomeActivity, this@HomeActivity)
+            adapter = ProfileAdapter(
+                dataList,
+                this@HomeActivity,
+                this@HomeActivity
+            )
             layoutManager = LinearLayoutManager(context)
         }
 
-        itemTouchHelper = ItemTouchHelper(ProfileItemTouchHelperCallback(this))
+        itemTouchHelper = ItemTouchHelper(
+            ProfileItemTouchHelperCallback(
+                this
+            )
+        )
         itemTouchHelper.attachToRecyclerView(viewBinding.recyclerView)
 
         // 뷰모델의 Observer를 통해 리사이클러뷰의 ProfileAdapter에 변경값 갱신

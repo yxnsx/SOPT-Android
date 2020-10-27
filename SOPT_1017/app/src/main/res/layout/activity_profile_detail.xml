@@ -8,13 +8,13 @@
 
         <variable
             name="profile"
-            type="com.yxnsx.sopt_1017.ProfileData" />
+            type="com.yxnsx.sopt_1017.week_02.ProfileData" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ProfileDetailActivity">
+        tools:context=".week_02.ProfileDetailActivity">
 
         <ImageView
             android:id="@+id/imageView"

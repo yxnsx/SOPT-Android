@@ -1,10 +1,12 @@
-package com.yxnsx.sopt_1017
+package com.yxnsx.sopt_1017.week_01
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.yxnsx.sopt_1017.week_02.HomeActivity
+import com.yxnsx.sopt_1017.R
 import kotlinx.android.synthetic.main.activity_log_in.*
 
 class LogInActivity : AppCompatActivity() {

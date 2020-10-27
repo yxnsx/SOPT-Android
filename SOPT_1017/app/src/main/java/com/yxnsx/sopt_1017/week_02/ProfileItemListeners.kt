@@ -1,7 +1,8 @@
-package com.yxnsx.sopt_1017
+package com.yxnsx.sopt_1017.week_02
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.yxnsx.sopt_1017.week_02.ProfileData
 
 interface ProfileItemClickListener {
     fun onClickProfileItem(view: View, profileData: ProfileData)
