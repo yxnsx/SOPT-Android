@@ -8,14 +8,19 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.yxnsx.sopt_1017.databinding.ActivityHomeBinding
 
 
-class HomeActivity : AppCompatActivity(), ProfileItemListener {
+class HomeActivity : AppCompatActivity(), ProfileItemClickListener, ProfileItemDragListener, ProfileItemActionListener {
 
+    private val dataList: MutableList<ProfileData> = emptyArray<ProfileData>().toMutableList()
     private lateinit var viewBinding: ActivityHomeBinding
     private val profileListViewModel: ProfileListViewModel by viewModels()
+
+    private lateinit var itemTouchHelper: ItemTouchHelper
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,10 +32,13 @@ class HomeActivity : AppCompatActivity(), ProfileItemListener {
 
         // recyclerView 설정
         viewBinding.recyclerView.apply {
-            adapter = ProfileAdapter(emptyList(), this@HomeActivity)
+            adapter = ProfileAdapter(dataList, this@HomeActivity, this@HomeActivity)
             layoutManager = LinearLayoutManager(context)
         }
         viewBinding.FABGridLayout.setOnClickListener(onClickListener)
+
+        itemTouchHelper = ItemTouchHelper(ProfileItemTouchHelperCallback(this))
+        itemTouchHelper.attachToRecyclerView(viewBinding.recyclerView)
 
         // 뷰모델의 Observer를 통해 리사이클러뷰의 ProfileAdapter에 변경값 갱신
         profileListViewModel.profileLiveData.observe(this, Observer {
@@ -41,11 +49,11 @@ class HomeActivity : AppCompatActivity(), ProfileItemListener {
     private val onClickListener = View.OnClickListener {
         when (it.id) {
             viewBinding.FABGridLayout.id ->
-                setLayoutStatus()
+                changeLayoutManager()
         }
     }
 
-    private fun setLayoutStatus() {
+    private fun changeLayoutManager() {
         viewBinding.apply {
             if (recyclerView.layoutManager is GridLayoutManager) {
                 recyclerView.layoutManager = LinearLayoutManager(this@HomeActivity)
@@ -64,5 +72,19 @@ class HomeActivity : AppCompatActivity(), ProfileItemListener {
         startActivity(intent)
 
         Toast.makeText(this, "click item", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onStartDrag(viewHolder: RecyclerView.ViewHolder) {
+        itemTouchHelper.startDrag(viewHolder)
+    }
+
+    override fun onItemMoved(from: Int, to: Int) {
+        profileListViewModel.moveProfileItem(from, to)
+        viewBinding.recyclerView.adapter?.notifyItemMoved(from, to)
+    }
+
+    override fun onItemSwiped(position: Int) {
+        profileListViewModel.swipeProfileItem(position)
+        viewBinding.recyclerView.adapter?.notifyItemRemoved(position)
     }
 }
