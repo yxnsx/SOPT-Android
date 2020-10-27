@@ -1,14 +1,17 @@
 package com.yxnsx.sopt_1017
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 
 
 class ProfileAdapter(
-    private var dataList: List<ProfileData>,
-    private val profileItemListener: ProfileItemListener
+    private var dataList: MutableList<ProfileData>,
+    private val profileItemClickListener: ProfileItemClickListener,
+    private val profileItemDragListener: ProfileItemDragListener
 ) : RecyclerView.Adapter<ProfileViewHolder>() {
 
 
@@ -27,18 +30,27 @@ class ProfileAdapter(
         return dataList.size
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onBindViewHolder(profileViewHolder: ProfileViewHolder, position: Int) {
 
         profileViewHolder.apply {
             onBind(dataList[position])
             dataBinding.root.setOnClickListener {
-                profileItemListener.onClickProfileItem(it, dataList[position])
+                profileItemClickListener.onClickProfileItem(it, dataList[position])
+            }
+            dataBinding.root.setOnLongClickListener {
+                it.setOnTouchListener { v, event ->
+                    if (event.action == MotionEvent.ACTION_DOWN) {
+                        profileItemDragListener.onStartDrag(this)
+                    }
+                    true // 해당 메서드에 정의한 내용만을 실행
+                }
+                true // 해당 메서드에 정의한 내용만을 실행
             }
         }
     }
 
-
-    fun setLiveData(newData: List<ProfileData>) {
+    fun setLiveData(newData: MutableList<ProfileData>) {
         dataList = newData
         notifyDataSetChanged()
     }
