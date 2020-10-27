@@ -16,7 +16,7 @@ import com.yxnsx.sopt_1017.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity(), ProfileItemClickListener, ProfileItemDragListener, ProfileItemActionListener {
 
-    private val dataList: MutableList<ProfileData> = emptyArray<ProfileData>().toMutableList()
+    private val dataList = mutableListOf<ProfileData>()
     private lateinit var viewBinding: ActivityHomeBinding
     private val profileListViewModel: ProfileListViewModel by viewModels()
 
@@ -30,12 +30,14 @@ class HomeActivity : AppCompatActivity(), ProfileItemClickListener, ProfileItemD
         viewBinding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
 
+        // clickListener 설정
+        viewBinding.FABGridLayout.setOnClickListener(onClickListener)
+
         // recyclerView 설정
         viewBinding.recyclerView.apply {
             adapter = ProfileAdapter(dataList, this@HomeActivity, this@HomeActivity)
             layoutManager = LinearLayoutManager(context)
         }
-        viewBinding.FABGridLayout.setOnClickListener(onClickListener)
 
         itemTouchHelper = ItemTouchHelper(ProfileItemTouchHelperCallback(this))
         itemTouchHelper.attachToRecyclerView(viewBinding.recyclerView)
@@ -70,8 +72,6 @@ class HomeActivity : AppCompatActivity(), ProfileItemClickListener, ProfileItemD
         val intent = Intent(this, ProfileDetailActivity::class.java)
         intent.putExtra("profileData", profileData)
         startActivity(intent)
-
-        Toast.makeText(this, "click item", Toast.LENGTH_SHORT).show()
     }
 
     override fun onStartDrag(viewHolder: RecyclerView.ViewHolder) {
