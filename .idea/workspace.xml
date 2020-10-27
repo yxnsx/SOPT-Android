@@ -6,12 +6,130 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab40240e-c418-4715-a785-838cad69a27e" name="Default Changelist" comment="" />
+    <list default="true" id="ab40240e-c418-4715-a785-838cad69a27e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/androidTest/java/com/yxnsx/week01/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/java/com/yxnsx/week01/HomeActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/java/com/yxnsx/week01/LogInActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/java/com/yxnsx/week01/MyApplication.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/java/com/yxnsx/week01/MySharedPreferences.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/java/com/yxnsx/week01/SignUpActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/layout/activity_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/layout/activity_log_in.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/layout/activity_sign_up.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/app/src/test/java/com/yxnsx/week01/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1010/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/androidTest/java/com/yxnsx/sopt_1017/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/java/com/yxnsx/sopt_1017/week_01/LogInActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/java/com/yxnsx/sopt_1017/week_01/MyApplication.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/java/com/yxnsx/sopt_1017/week_01/MySharedPreferences.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/java/com/yxnsx/sopt_1017/week_01/SignUpActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/java/com/yxnsx/sopt_1017/week_02/BindingAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/java/com/yxnsx/sopt_1017/week_02/HomeActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/java/com/yxnsx/sopt_1017/week_02/ProfileAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/java/com/yxnsx/sopt_1017/week_02/ProfileData.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/java/com/yxnsx/sopt_1017/week_02/ProfileDetailActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/java/com/yxnsx/sopt_1017/week_02/ProfileItemListeners.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/java/com/yxnsx/sopt_1017/week_02/ProfileItemTouchHelperCallback.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/java/com/yxnsx/sopt_1017/week_02/ProfileListViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/java/com/yxnsx/sopt_1017/week_02/ProfileViewHolder.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/drawable-v24/emoji_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/drawable-v24/emoji_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/drawable-v24/emoji_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/drawable-v24/emoji_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/drawable-v24/emoji_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/drawable-v24/emoji_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/drawable-v24/emoji_07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/drawable-v24/emoji_08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/drawable-v24/emoji_09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/drawable-v24/emoji_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/drawable/icon_grid.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/drawable/icon_list.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/layout/activity_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/layout/activity_log_in.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/layout/activity_profile_detail.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/layout/activity_sign_up.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/layout/item_recycler_view.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/app/src/test/java/com/yxnsx/sopt_1017/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOPT_1017/settings.gradle" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_30" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -20,11 +138,20 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ilcxhb67B91jbewNQQrr9SevFG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -32,7 +159,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="memory.settings.postsync.last.time.stamp" value="1602485872515" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="memory.settings.postsync.last.time.stamp" value="1603793611385" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RunManager">
@@ -43,7 +171,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
