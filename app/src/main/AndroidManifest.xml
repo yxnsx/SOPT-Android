@@ -3,17 +3,18 @@
     package="com.yxnsx.sopt">
 
     <application
-        android:name="com.yxnsx.sopt.week01.MyApplication"
+        android:name=".week01.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.yxnsx.sopt.week02.ProfileDetailActivity"/>
-        <activity android:name="com.yxnsx.sopt.week02.HomeActivity" />
-        <activity android:name="com.yxnsx.sopt.week01.SignUpActivity" />
-        <activity android:name="com.yxnsx.sopt.week01.LogInActivity">
+        <activity android:name=".week03.MainActivity"/>
+        <activity android:name=".week02.ProfileDetailActivity" />
+        <activity android:name=".week03.HomeActivity" />
+        <activity android:name=".week01.SignUpActivity" />
+        <activity android:name=".week01.LogInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
