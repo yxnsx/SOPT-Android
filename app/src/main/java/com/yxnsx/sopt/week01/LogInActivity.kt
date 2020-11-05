@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import com.yxnsx.sopt.week02.HomeActivity
+import com.yxnsx.sopt.week03.HomeActivity
 import com.yxnsx.sopt.R
 import kotlinx.android.synthetic.main.activity_log_in.*
 
