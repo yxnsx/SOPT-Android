@@ -6,7 +6,7 @@ import androidx.viewpager.widget.ViewPager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.yxnsx.sopt.*
 import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.fragment_profile.viewPager
+import kotlinx.android.synthetic.main.fragment_bottom_nav_profile.viewPager
 import kotlin.properties.Delegates
 
 
@@ -17,12 +17,19 @@ class HomeActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        viewPager.addOnPageChangeListener(this)
-        viewPager.adapter = ViewPagerAdapter(supportFragmentManager)
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener)
+        setViewPager()
+        setBottomNavigation()
     }
 
+
+    private fun setViewPager() {
+        viewPager.addOnPageChangeListener(this)
+        viewPager.adapter = HomeViewPagerAdapter(supportFragmentManager)
+    }
+
+    private fun setBottomNavigation() {
+        bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener)
+    }
 
     private val navigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener {
