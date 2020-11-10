@@ -5,21 +5,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.yxnsx.sopt.R
-import com.yxnsx.sopt.databinding.FragmentEmptyBinding
-import com.yxnsx.sopt.databinding.FragmentInfoBinding
+import com.yxnsx.sopt.databinding.FragmentBottomNavEmptyBinding
 
 
-class InfoFragment : Fragment() {
+class BottomNavEmptyFragment : Fragment() {
 
-    lateinit var viewBinding: FragmentInfoBinding
+    lateinit var viewBinding: FragmentBottomNavEmptyBinding
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        viewBinding = FragmentInfoBinding.inflate(layoutInflater)
+        viewBinding = FragmentBottomNavEmptyBinding.inflate(layoutInflater)
         return viewBinding.root
     }
 }

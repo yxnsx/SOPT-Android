@@ -3,16 +3,16 @@ package com.yxnsx.sopt.week03
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.yxnsx.sopt.databinding.FragmentProfileBinding
 
-class ViewPagerAdapter(fragmentManager: FragmentManager) :
+
+class HomeViewPagerAdapter(fragmentManager: FragmentManager) :
     FragmentStatePagerAdapter(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
 
     override fun getItem(position: Int): Fragment = when(position){
-        0 -> ProfileFragment()
-        1 -> RecyclerViewFragment()
-        2 -> EmptyFragment()
+        0 -> BottomNavProfileFragment()
+        1 -> BottomNavRecyclerViewFragment()
+        2 -> BottomNavEmptyFragment()
         else -> throw IllegalStateException("Unexpected position: $position")
     }
 

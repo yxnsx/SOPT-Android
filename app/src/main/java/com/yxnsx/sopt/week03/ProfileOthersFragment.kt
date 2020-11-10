@@ -5,21 +5,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.yxnsx.sopt.R
-import com.yxnsx.sopt.databinding.FragmentInfoBinding
-import com.yxnsx.sopt.databinding.FragmentOthersBinding
+import com.yxnsx.sopt.databinding.FragmentProfileOthersBinding
 
 
-class OthersFragment : Fragment() {
+class ProfileOthersFragment : Fragment() {
 
-    lateinit var viewBinding: FragmentOthersBinding
+    lateinit var viewBinding: FragmentProfileOthersBinding
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        viewBinding = FragmentOthersBinding.inflate(layoutInflater)
+        viewBinding = FragmentProfileOthersBinding.inflate(layoutInflater)
         return viewBinding.root
     }
 }

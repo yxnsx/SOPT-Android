@@ -6,8 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
@@ -15,18 +13,17 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.yxnsx.sopt.R
-import com.yxnsx.sopt.databinding.ActivityHomeBinding
-import com.yxnsx.sopt.databinding.FragmentRecyclerViewBinding
+import com.yxnsx.sopt.databinding.FragmentBottomNavRecyclerViewBinding
 import com.yxnsx.sopt.week02.*
 
 
-class RecyclerViewFragment : Fragment(),
+class BottomNavRecyclerViewFragment : Fragment(),
     ProfileItemClickListener,
     ProfileItemDragListener,
     ProfileItemActionListener {
 
     private val dataList = mutableListOf<ProfileData>()
-    private lateinit var viewBinding: FragmentRecyclerViewBinding
+    private lateinit var viewBinding: FragmentBottomNavRecyclerViewBinding
     private val profileListViewModel: ProfileListViewModel by viewModels()
 
     private lateinit var itemTouchHelper: ItemTouchHelper
@@ -36,7 +33,7 @@ class RecyclerViewFragment : Fragment(),
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        viewBinding = FragmentRecyclerViewBinding.inflate(layoutInflater)
+        viewBinding = FragmentBottomNavRecyclerViewBinding.inflate(layoutInflater)
         return viewBinding.root
     }
 
@@ -44,28 +41,34 @@ class RecyclerViewFragment : Fragment(),
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setClickListener()
+        setRecyclerView()
+        setItemTouchHelper()
+        setLiveDataObserver()
+    }
 
-        // clickListener 설정
+
+    private fun setClickListener() {
         viewBinding.FABGridLayout.setOnClickListener(onClickListener)
+    }
 
-        // recyclerView 설정
+    private fun setRecyclerView() {
         viewBinding.recyclerView.apply {
             adapter = ProfileAdapter(
                 dataList,
-                this@RecyclerViewFragment,
-                this@RecyclerViewFragment
+                this@BottomNavRecyclerViewFragment,
+                this@BottomNavRecyclerViewFragment
             )
             layoutManager = LinearLayoutManager(context)
         }
+    }
 
-        itemTouchHelper = ItemTouchHelper(
-            ProfileItemTouchHelperCallback(
-                this
-            )
-        )
+    private fun setItemTouchHelper() {
+        itemTouchHelper = ItemTouchHelper(ProfileItemTouchHelperCallback(this))
         itemTouchHelper.attachToRecyclerView(viewBinding.recyclerView)
+    }
 
-        // 뷰모델의 Observer를 통해 리사이클러뷰의 ProfileAdapter에 변경값 갱신
+    private fun setLiveDataObserver() {
         profileListViewModel.profileLiveData.observe(viewLifecycleOwner, Observer {
             (viewBinding.recyclerView.adapter as ProfileAdapter).setLiveData(it)
         })
@@ -91,7 +94,6 @@ class RecyclerViewFragment : Fragment(),
     }
 
     override fun onClickProfileItem(view: View, profileData: ProfileData) {
-
         val intent = Intent(context, ProfileDetailActivity::class.java)
         intent.putExtra("profileData", profileData)
         startActivity(intent)
