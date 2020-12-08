@@ -8,9 +8,33 @@
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ab40240e-c418-4715-a785-838cad69a27e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week01/LogInActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week01/LogInActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week01/MySharedPreferences.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week01/MySharedPreferences.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week01/SignUpActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week01/SignUpActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week03/BottomNavProfileFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week03/BottomNavProfileFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week06/RequestSignUp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week06/RequestSignUp.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +65,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="resourceFile" />
+        <option value="Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -65,11 +90,17 @@
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.yxnsx.sopt.week06" />
+    </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="com.yxnsx.sopt.week03" />
     </key>
     <key name="android.template.-425213577">
       <recent name="com.yxnsx.sopt.week03" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week06/retrofit2" />
     </key>
   </component>
   <component name="RunManager">
@@ -151,11 +182,27 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="627" y="259" key="#com.intellij.ide.util.MemberChooser" timestamp="1604567980836">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="627" y="259" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1604567980836" />
+    <state x="508" y="289" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607326174802">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="508" y="289" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1607326174802" />
     <state x="578" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604566000785">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -168,21 +215,25 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="428" y="298" key="AndroidCreateResourceFileDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1604130974148" />
-    <state width="1638" height="18" key="GridCell.Tab.0.bottom" timestamp="1604559853832">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1636" height="277" key="GridCell.Tab.0.bottom" timestamp="1607408842154">
+      <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state width="1638" height="18" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1604559853832" />
-    <state width="1638" height="18" key="GridCell.Tab.0.center" timestamp="1604559853831">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1636" height="277" key="GridCell.Tab.0.bottom/0.25.1680.1025@0.25.1680.1025" timestamp="1607408842154" />
+    <state width="1636" height="277" key="GridCell.Tab.0.center" timestamp="1607408842153">
+      <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state width="1638" height="18" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1604559853831" />
-    <state width="1638" height="18" key="GridCell.Tab.0.left" timestamp="1604559853831">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1636" height="277" key="GridCell.Tab.0.center/0.25.1680.1025@0.25.1680.1025" timestamp="1607408842153" />
+    <state width="1636" height="277" key="GridCell.Tab.0.left" timestamp="1607408842153">
+      <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state width="1638" height="18" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1604559853831" />
-    <state width="1638" height="18" key="GridCell.Tab.0.right" timestamp="1604559853832">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1636" height="277" key="GridCell.Tab.0.left/0.25.1680.1025@0.25.1680.1025" timestamp="1607408842153" />
+    <state width="1636" height="277" key="GridCell.Tab.0.right" timestamp="1607408842154">
+      <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state width="1638" height="18" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1604559853832" />
+    <state width="1636" height="277" key="GridCell.Tab.0.right/0.25.1680.1025@0.25.1680.1025" timestamp="1607408842154" />
   </component>
 </project>
