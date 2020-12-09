@@ -1,27 +1,22 @@
 package com.yxnsx.sopt.week03
 
-import android.content.Intent
+import android.content.Context
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.InputMethodManager
+import android.widget.TextView
 import android.widget.Toast
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yxnsx.sopt.R
 import com.yxnsx.sopt.databinding.FragmentBottomNavKakaoSearchBinding
 import com.yxnsx.sopt.util.KakaoSearchItemClickListener
-import com.yxnsx.sopt.week02.UserListViewModel
 import com.yxnsx.sopt.week06.kakao_search_api.*
-import kotlinx.android.synthetic.main.fragment_bottom_nav_kakao_search.*
-import kotlinx.android.synthetic.main.item_kakao_search.view.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
 
 class BottomNavKakaoSearchFragment : Fragment(), KakaoSearchItemClickListener {
@@ -45,6 +40,7 @@ class BottomNavKakaoSearchFragment : Fragment(), KakaoSearchItemClickListener {
         setViewModel()
         setObserverToViewModel()
         setButtonClickListener()
+        viewBinding.editTextSearch.setOnEditorActionListener(editTextActionListener)
     }
 
     private fun setViewModel() {
@@ -73,10 +69,15 @@ class BottomNavKakaoSearchFragment : Fragment(), KakaoSearchItemClickListener {
 
     private val fragmentButtonClickListener = View.OnClickListener {
         when (it.id) {
-            R.id.imageButton_search -> {
-                kakaoSearchViewModel.getSearchResults(viewBinding.editTextSearch.text.toString())
+            viewBinding.imageButtonSearch.id -> {
+                setQueryToViewModel()
             }
         }
+    }
+
+    private fun setQueryToViewModel() {
+        kakaoSearchViewModel.getSearchResults(viewBinding.editTextSearch.text.toString())
+        hideKeyboard()
     }
 
     override fun onClickKakaoSearchItem(view: View, searchResult: KakaoSearchModel.Document) {
@@ -85,5 +86,19 @@ class BottomNavKakaoSearchFragment : Fragment(), KakaoSearchItemClickListener {
                 Toast.makeText(requireContext(), "search result clicked", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    private val editTextActionListener = TextView.OnEditorActionListener { v, actionId, _ ->
+        if (v.id == viewBinding.editTextSearch.id && actionId == EditorInfo.IME_ACTION_SEARCH) {
+            setQueryToViewModel()
+            return@OnEditorActionListener true
+        }
+        return@OnEditorActionListener false
+    }
+
+    private fun hideKeyboard() {
+        val inputMethodManager =
+            requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(viewBinding.editTextSearch.windowToken, 0)
     }
 }
