@@ -8,9 +8,12 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.yxnsx.sopt.R
-import com.yxnsx.sopt.week06.RequestSignUp
-import com.yxnsx.sopt.week06.ResponseUserData
-import com.yxnsx.sopt.week06.RetrofitClient
+import com.yxnsx.sopt.util.USER_EMAIL
+import com.yxnsx.sopt.util.USER_NAME
+import com.yxnsx.sopt.util.USER_PASSWORD
+import com.yxnsx.sopt.week06.sopt_api.RequestSignUp
+import com.yxnsx.sopt.week06.sopt_api.ResponseUserData
+import com.yxnsx.sopt.week06.sopt_api.SoptRetrofitClient
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -39,7 +42,7 @@ class SignUpActivity : AppCompatActivity() {
     private fun checkValidation() {
 
         val userName = editText_name.text.toString()
-        val userId = editText_id.text.toString()
+        val userId = editText_email.text.toString()
         val userPassword = editText_password.text.toString()
 
         // 모든 폼이 입력되지 않았을 경우,
@@ -53,8 +56,12 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun signUpUserToServer(userId: String, userPassword: String, userName: String) {
-        val call: Call<ResponseUserData> = RetrofitClient.userDataService.postSignUp(
-            RequestSignUp(userId, userPassword, userName)
+        val call: Call<ResponseUserData> = SoptRetrofitClient.SOPT_USER_SERVICE.postSignUp(
+            RequestSignUp(
+                userId,
+                userPassword,
+                userName
+            )
         )
         call.enqueue(object : Callback<ResponseUserData> {
             override fun onFailure(call: Call<ResponseUserData>, t: Throwable) {
@@ -86,9 +93,9 @@ class SignUpActivity : AppCompatActivity() {
         val intent = Intent(this, LogInActivity::class.java)
 
         // 인텐트로 넘길 데이터 설정
-        intent.putExtra("userName", userName)
-        intent.putExtra("userId", userId)
-        intent.putExtra("userPassword", userPassword)
+        intent.putExtra(USER_NAME, userName)
+        intent.putExtra(USER_EMAIL, userId)
+        intent.putExtra(USER_PASSWORD, userPassword)
         setResult(Activity.RESULT_OK, intent)
         finish()
     }

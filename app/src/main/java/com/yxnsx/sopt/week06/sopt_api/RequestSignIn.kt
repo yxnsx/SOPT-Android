@@ -1,4 +1,4 @@
-package com.yxnsx.sopt.week06
+package com.yxnsx.sopt.week06.sopt_api
 
 data class RequestSignIn(
     val email: String,

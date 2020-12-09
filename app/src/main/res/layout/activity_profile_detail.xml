@@ -8,13 +8,13 @@
 
         <variable
             name="profile"
-            type="com.yxnsx.sopt.week02.ProfileData" />
+            type="com.yxnsx.sopt.week02.UserData" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".week02.ProfileDetailActivity">
+        tools:context=".week02.UserDetailActivity">
 
         <TextView
             android:id="@+id/textView_toolbar"
@@ -40,7 +40,7 @@
             app:layout_constraintTop_toTopOf="@+id/textView_toolbar" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageView_userImage"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:scaleType="centerCrop"
@@ -60,7 +60,7 @@
             android:textSize="21sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView_userImage" />
 
         <TextView
             android:id="@+id/textView_subTitle"
@@ -73,7 +73,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView_title" />
 
         <TextView
-            android:id="@+id/_date"
+            android:id="@+id/textView_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -83,27 +83,28 @@
             app:layout_constraintTop_toBottomOf="@+id/textView_subTitle" />
 
         <TextView
-            android:id="@+id/textView_date"
+            android:id="@+id/textView_userDate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:text="@{profile.date}"
             android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="@+id/_date"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_date"
             app:layout_constraintEnd_toEndOf="@+id/textView_subTitle"
-            app:layout_constraintStart_toEndOf="@+id/_date"
-            app:layout_constraintTop_toTopOf="@+id/_date" />
+            app:layout_constraintStart_toEndOf="@+id/textView_date"
+            app:layout_constraintTop_toTopOf="@+id/textView_date" />
 
         <TextView
+            android:id="@+id/textView_description"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="@{profile.description}"
             android:textSize="21sp"
-            app:layout_constraintEnd_toEndOf="@+id/textView_date"
-            app:layout_constraintStart_toStartOf="@+id/_date"
-            app:layout_constraintTop_toBottomOf="@+id/textView_date" />
+            app:layout_constraintEnd_toEndOf="@+id/textView_userDate"
+            app:layout_constraintStart_toStartOf="@+id/textView_date"
+            app:layout_constraintTop_toBottomOf="@+id/textView_userDate" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

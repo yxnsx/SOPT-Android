@@ -1,6 +1,5 @@
 package com.yxnsx.sopt.week01
 
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,13 +8,13 @@ import android.view.View
 import android.widget.Toast
 import com.yxnsx.sopt.week03.HomeActivity
 import com.yxnsx.sopt.R
-import com.yxnsx.sopt.week03.BottomNavProfileFragment
-import com.yxnsx.sopt.week06.RequestSignIn
-import com.yxnsx.sopt.week06.ResponseUserData
-import com.yxnsx.sopt.week06.RetrofitClient
+import com.yxnsx.sopt.util.*
+import com.yxnsx.sopt.week06.sopt_api.RequestSignIn
+import com.yxnsx.sopt.week06.sopt_api.ResponseUserData
+import com.yxnsx.sopt.week06.sopt_api.SoptRetrofitClient
 import kotlinx.android.synthetic.main.activity_log_in.*
 import kotlinx.android.synthetic.main.activity_log_in.button_signUp
-import kotlinx.android.synthetic.main.activity_log_in.editText_id
+import kotlinx.android.synthetic.main.activity_log_in.editText_email
 import kotlinx.android.synthetic.main.activity_log_in.editText_password
 import retrofit2.Call
 import retrofit2.Callback
@@ -23,7 +22,6 @@ import retrofit2.Response
 
 class LogInActivity : AppCompatActivity() {
 
-    private val REQUEST_SIGNUP = 100
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +36,7 @@ class LogInActivity : AppCompatActivity() {
     }
 
     private fun checkSharedPreferences() {
-        val userName = MyApplication.mySharedPreferences.getString("userName", "")
+        val userName = MyApplication.mySharedPreferences.getString(USER_NAME, "")
 
         if (userName.isNotEmpty()) {
             // HomeActivity로 이동
@@ -58,13 +56,13 @@ class LogInActivity : AppCompatActivity() {
             button_signUp -> {
                 // SignUpActivity로 이동
                 val intent = Intent(this, SignUpActivity::class.java)
-                startActivityForResult(intent, REQUEST_SIGNUP)
+                startActivityForResult(intent, REQUEST_SIGN_UP)
             }
         }
     }
 
     private fun checkValidation() {
-        val userId = editText_id.text.toString()
+        val userId = editText_email.text.toString()
         val userPassword = editText_password.text.toString()
 
         // 모든 폼이 입력되지 않았을 경우,
@@ -78,7 +76,7 @@ class LogInActivity : AppCompatActivity() {
     }
 
     private fun signInUserToServer(userId: String, userPassword: String) {
-        val call: Call<ResponseUserData> = RetrofitClient.userDataService.postSignIn(
+        val call: Call<ResponseUserData> = SoptRetrofitClient.SOPT_USER_SERVICE.postSignIn(
             RequestSignIn(userId, userPassword)
         )
         call.enqueue(object : Callback<ResponseUserData> {
@@ -95,8 +93,8 @@ class LogInActivity : AppCompatActivity() {
                     ?.body()
                     ?.let {
                         // SharedPreferences에 자동로그인을 위한 userName 및 userId 정보 저장
-                        MyApplication.mySharedPreferences.setString("userName", it.data.userName)
-                        MyApplication.mySharedPreferences.setString("userId", it.data.email)
+                        MyApplication.mySharedPreferences.setString(USER_NAME, it.data.userName)
+                        MyApplication.mySharedPreferences.setString(USER_EMAIL, it.data.email)
 
                         // HomeActivity로 이동
                         val intent = Intent(applicationContext, HomeActivity::class.java)
@@ -115,13 +113,13 @@ class LogInActivity : AppCompatActivity() {
         if (resultCode == RESULT_OK) {
             when (requestCode) {
 
-                REQUEST_SIGNUP -> {
+                REQUEST_SIGN_UP -> {
                     // 넘어온 인텐트에서 데이터 가져오기
-                    val userId = data?.getStringExtra("userId")
-                    val userPassword = data?.getStringExtra("userPassword")
+                    val userId = data?.getStringExtra(USER_EMAIL)
+                    val userPassword = data?.getStringExtra(USER_PASSWORD)
 
                     // 가져온 데이터 바탕으로 editText에 값 설정
-                    editText_id.setText(userId)
+                    editText_email.setText(userId)
                     editText_password.setText(userPassword)
                 }
             }

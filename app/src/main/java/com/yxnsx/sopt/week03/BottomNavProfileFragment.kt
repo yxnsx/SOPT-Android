@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.yxnsx.sopt.databinding.FragmentBottomNavProfileBinding
-import com.yxnsx.sopt.week01.MyApplication
+import com.yxnsx.sopt.util.MyApplication
+import com.yxnsx.sopt.util.USER_EMAIL
+import com.yxnsx.sopt.util.USER_NAME
 
 
 class BottomNavProfileFragment : Fragment() {
@@ -31,10 +33,10 @@ class BottomNavProfileFragment : Fragment() {
     }
 
     private fun setUserInfo() {
-        val userName = MyApplication.mySharedPreferences.getString("userName", "")
-        val userId = MyApplication.mySharedPreferences.getString("userId", "")
+        val userName = MyApplication.mySharedPreferences.getString(USER_NAME, "")
+        val userEmail = MyApplication.mySharedPreferences.getString(USER_EMAIL, "")
         viewBinding.textViewName.text = userName
-        viewBinding.textViewInfo.text = userId
+        viewBinding.textViewEmail.text = userEmail
     }
 
     private fun setTabLayout() {

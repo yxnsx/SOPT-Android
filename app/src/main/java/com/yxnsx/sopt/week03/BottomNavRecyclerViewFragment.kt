@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.yxnsx.sopt.R
 import com.yxnsx.sopt.databinding.FragmentBottomNavRecyclerViewBinding
+import com.yxnsx.sopt.util.USER_DATA
 import com.yxnsx.sopt.week02.*
 
 
@@ -22,9 +23,9 @@ class BottomNavRecyclerViewFragment : Fragment(),
     ProfileItemDragListener,
     ProfileItemActionListener {
 
-    private val dataList = mutableListOf<ProfileData>()
+    private val dataList = mutableListOf<UserData>()
     private lateinit var viewBinding: FragmentBottomNavRecyclerViewBinding
-    private val profileListViewModel: ProfileListViewModel by viewModels()
+    private val userListViewModel: UserListViewModel by viewModels()
 
     private lateinit var itemTouchHelper: ItemTouchHelper
 
@@ -54,7 +55,7 @@ class BottomNavRecyclerViewFragment : Fragment(),
 
     private fun setRecyclerView() {
         viewBinding.recyclerView.apply {
-            adapter = ProfileAdapter(
+            adapter = UserAdapter(
                 dataList,
                 this@BottomNavRecyclerViewFragment,
                 this@BottomNavRecyclerViewFragment
@@ -64,13 +65,13 @@ class BottomNavRecyclerViewFragment : Fragment(),
     }
 
     private fun setItemTouchHelper() {
-        itemTouchHelper = ItemTouchHelper(ProfileItemTouchHelperCallback(this))
+        itemTouchHelper = ItemTouchHelper(UserItemTouchHelperCallback(this))
         itemTouchHelper.attachToRecyclerView(viewBinding.recyclerView)
     }
 
     private fun setLiveDataObserver() {
-        profileListViewModel.profileLiveData.observe(viewLifecycleOwner, Observer {
-            (viewBinding.recyclerView.adapter as ProfileAdapter).setLiveData(it)
+        userListViewModel.profileLiveData.observe(viewLifecycleOwner, Observer {
+            (viewBinding.recyclerView.adapter as UserAdapter).setLiveData(it)
         })
     }
 
@@ -93,9 +94,9 @@ class BottomNavRecyclerViewFragment : Fragment(),
         }
     }
 
-    override fun onClickProfileItem(view: View, profileData: ProfileData) {
-        val intent = Intent(context, ProfileDetailActivity::class.java)
-        intent.putExtra("profileData", profileData)
+    override fun onClickProfileItem(view: View, userData: UserData) {
+        val intent = Intent(context, UserDetailActivity::class.java)
+        intent.putExtra(USER_DATA, userData)
         startActivity(intent)
     }
 
@@ -104,12 +105,12 @@ class BottomNavRecyclerViewFragment : Fragment(),
     }
 
     override fun onItemMoved(from: Int, to: Int) {
-        profileListViewModel.moveProfileItem(from, to)
+        userListViewModel.moveProfileItem(from, to)
         //viewBinding.recyclerView.adapter?.notifyItemMoved(from, to)
     }
 
     override fun onItemSwiped(position: Int) {
-        profileListViewModel.swipeProfileItem(position)
+        userListViewModel.swipeProfileItem(position)
         //viewBinding.recyclerView.adapter?.notifyItemRemoved(position)
     }
 }

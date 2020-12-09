@@ -4,7 +4,7 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
 interface ProfileItemClickListener {
-    fun onClickProfileItem(view: View, profileData: ProfileData)
+    fun onClickProfileItem(view: View, userData: UserData)
 }
 
 interface ProfileItemDragListener {

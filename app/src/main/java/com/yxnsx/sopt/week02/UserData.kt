@@ -4,7 +4,7 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class ProfileData(
+data class UserData(
     var image: Int,
     var title: String,
     var subTitle: String,

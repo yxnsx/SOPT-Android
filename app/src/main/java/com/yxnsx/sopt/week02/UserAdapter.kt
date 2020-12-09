@@ -9,15 +9,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.yxnsx.sopt.*
 
 
-class ProfileAdapter(
-    private var dataList: MutableList<ProfileData>,
+class UserAdapter(
+    private var dataList: MutableList<UserData>,
     private val profileItemClickListener: ProfileItemClickListener,
     private val profileItemDragListener: ProfileItemDragListener
-) : RecyclerView.Adapter<ProfileViewHolder>() {
+) : RecyclerView.Adapter<UserViewHolder>() {
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProfileViewHolder {
-        return ProfileViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
+        return UserViewHolder(
             DataBindingUtil.inflate(
                 LayoutInflater.from(parent.context),
                 R.layout.item_recycler_view,
@@ -32,9 +32,9 @@ class ProfileAdapter(
     }
 
     @SuppressLint("ClickableViewAccessibility")
-    override fun onBindViewHolder(profileViewHolder: ProfileViewHolder, position: Int) {
+    override fun onBindViewHolder(userViewHolder: UserViewHolder, position: Int) {
 
-        profileViewHolder.apply {
+        userViewHolder.apply {
             onBind(dataList[position])
             dataBinding.root.setOnClickListener {
                 profileItemClickListener.onClickProfileItem(it, dataList[position])
@@ -51,7 +51,7 @@ class ProfileAdapter(
         }
     }
 
-    fun setLiveData(newData: MutableList<ProfileData>) {
+    fun setLiveData(newData: MutableList<UserData>) {
         dataList = newData
         notifyDataSetChanged()
     }

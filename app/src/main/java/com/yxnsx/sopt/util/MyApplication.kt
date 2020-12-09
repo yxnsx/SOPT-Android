@@ -1,4 +1,4 @@
-package com.yxnsx.sopt.week01
+package com.yxnsx.sopt.util
 
 import android.app.Application
 

@@ -5,19 +5,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.yxnsx.sopt.databinding.FragmentBottomNavEmptyBinding
+import com.yxnsx.sopt.databinding.FragmentBottomNavKakaoSearchBinding
 
 
-class BottomNavEmptyFragment : Fragment() {
+class BottomNavkakaoSearchFragment : Fragment() {
 
-    lateinit var viewBinding: FragmentBottomNavEmptyBinding
+    lateinit var viewBinding: FragmentBottomNavKakaoSearchBinding
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        viewBinding = FragmentBottomNavEmptyBinding.inflate(layoutInflater)
+        viewBinding = FragmentBottomNavKakaoSearchBinding.inflate(layoutInflater)
         return viewBinding.root
     }
 }

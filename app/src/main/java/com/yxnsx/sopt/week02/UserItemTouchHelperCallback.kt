@@ -3,7 +3,7 @@ package com.yxnsx.sopt.week02
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 
-class ProfileItemTouchHelperCallback(private val profileItemActionListener: ProfileItemActionListener) : ItemTouchHelper.Callback() {
+class UserItemTouchHelperCallback(private val profileItemActionListener: ProfileItemActionListener) : ItemTouchHelper.Callback() {
 
 
     override fun getMovementFlags(
