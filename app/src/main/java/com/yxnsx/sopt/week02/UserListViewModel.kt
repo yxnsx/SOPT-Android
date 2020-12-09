@@ -159,16 +159,4 @@ class UserListViewModel : ViewModel() {
         )
         return userData
     }
-
-    fun moveProfileItem(from: Int, to: Int) {
-        if (from == to) {
-            return
-        }
-        val fromItem = userData.removeAt(from)
-        userData.add(to, fromItem)
-    }
-
-    fun swipeProfileItem(position: Int) {
-        userData.removeAt(position)
-    }
 }

@@ -22,6 +22,7 @@ interface KakaoSearchApi {
         @Query("query") query: String
     ): Response<KakaoSearchModel>
 
+
     companion object {
         operator fun invoke(): KakaoSearchApi {
             return Retrofit.Builder()

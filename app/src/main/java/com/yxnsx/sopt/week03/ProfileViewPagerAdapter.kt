@@ -18,5 +18,4 @@ class ProfileViewPagerAdapter(fragmentManager: FragmentManager) :
     override fun getCount(): Int {
         return 2
     }
-
 }

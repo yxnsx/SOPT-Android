@@ -19,7 +19,7 @@
         <activity android:name=".week02.UserDetailActivity" />
         <activity android:name=".week03.HomeActivity" />
         <activity android:name=".week01.SignUpActivity" />
-        <activity android:name=".week01.LogInActivity">
+        <activity android:name=".week01.SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

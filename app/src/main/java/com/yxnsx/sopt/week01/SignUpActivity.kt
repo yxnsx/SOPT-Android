@@ -13,7 +13,7 @@ import com.yxnsx.sopt.util.USER_NAME
 import com.yxnsx.sopt.util.USER_PASSWORD
 import com.yxnsx.sopt.week06.sopt_api.RequestSignUp
 import com.yxnsx.sopt.week06.sopt_api.ResponseUserData
-import com.yxnsx.sopt.week06.sopt_api.SoptRetrofitClient
+import com.yxnsx.sopt.week06.sopt_api.SoptRetrofitObject
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -55,14 +55,10 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
-    private fun signUpUserToServer(userId: String, userPassword: String, userName: String) {
-        val call: Call<ResponseUserData> = SoptRetrofitClient.SOPT_USER_SERVICE.postSignUp(
-            RequestSignUp(
-                userId,
-                userPassword,
-                userName
-            )
-        )
+    private fun signUpUserToServer(email: String, password: String, name: String) {
+        val call: Call<ResponseUserData> =
+            SoptRetrofitObject.SOPT_USER_API.postSignUp(RequestSignUp(email, password, name))
+
         call.enqueue(object : Callback<ResponseUserData> {
             override fun onFailure(call: Call<ResponseUserData>, t: Throwable) {
                 Log.d("TAG", t.localizedMessage!!.toString())
@@ -78,7 +74,7 @@ class SignUpActivity : AppCompatActivity() {
                     ?.let {
                         Toast.makeText(applicationContext, "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT)
                             .show()
-                        passUserInfoToLoginActivity(it.data.userName, it.data.email, userPassword)
+                        passUserInfoToLoginActivity(it.data.userName, it.data.email, password)
                     }
             }
         })
@@ -90,7 +86,7 @@ class SignUpActivity : AppCompatActivity() {
         userPassword: String
     ) {
         // LogInActivity로 되돌아가는 인텐트 설정
-        val intent = Intent(this, LogInActivity::class.java)
+        val intent = Intent(this, SignInActivity::class.java)
 
         // 인텐트로 넘길 데이터 설정
         intent.putExtra(USER_NAME, userName)

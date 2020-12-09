@@ -5,13 +5,14 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
-object SoptRetrofitClient {
+object SoptRetrofitObject {
+
     // SingleTon
     private val retrofit : Retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL_SOPT_API)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    val SOPT_USER_SERVICE : SoptUserService = retrofit.create(
-        SoptUserService::class.java)
+    val SOPT_USER_API : SoptUserApi = retrofit.create(
+        SoptUserApi::class.java)
 }

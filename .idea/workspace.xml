@@ -29,6 +29,24 @@
   <component name="ChangeListManager">
     <list default="true" id="ab40240e-c418-4715-a785-838cad69a27e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/util/RecyclerViewItemListeners.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/util/Value.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/util/Value.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week01/LogInActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week01/SignUpActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week01/SignUpActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week02/UserAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week02/UserAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week02/UserData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week02/UserData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week02/UserItemTouchHelperCallback.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week02/UserListViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week02/UserListViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week02/UserViewHolder.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week03/BottomNavKakaoSearchFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week03/BottomNavKakaoSearchFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week03/BottomNavRecyclerViewFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week03/BottomNavRecyclerViewFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week03/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week03/HomeActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week06/kakao_search_api/KakaoSearchAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week06/kakao_search_api/KakaoSearchAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week06/sopt_api/SoptRetrofitClient.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week06/sopt_api/SoptUserService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_log_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_log_in.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +95,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Samsung_Galaxy_S20_API_30" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-12-09T16:12:44.239Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/util" />
@@ -84,8 +104,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/util" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week06/retrofit2" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="com.yxnsx.sopt.week06" />
@@ -97,9 +118,8 @@
     <key name="android.template.-425213577">
       <recent name="com.yxnsx.sopt.week03" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/util" />
-      <recent name="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week06/retrofit2" />
     </key>
   </component>
   <component name="RunManager">
@@ -199,14 +219,15 @@
     </state>
     <state x="627" y="259" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1604567980836" />
     <state x="627" y="261" key="#com.intellij.ide.util.MemberChooser/0.25.1680.1025@0.25.1680.1025" timestamp="1607507550700" />
-    <state x="508" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607411093379">
+    <state x="508" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607529942206">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
-    <state x="508" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1607411093379" />
-    <state x="578" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604566000785">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="508" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1607529942206" />
+    <state x="578" y="291" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607530164723">
+      <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="578" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1604566000785" />
+    <state x="578" y="291" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1607530164723" />
     <state x="614" y="198" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1607410456926">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
@@ -216,29 +237,33 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="428" y="298" key="AndroidCreateResourceFileDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1604130974148" />
-    <state width="1636" height="277" key="GridCell.Tab.0.bottom" timestamp="1607522995460">
+    <state width="1636" height="235" key="GridCell.Tab.0.bottom" timestamp="1607530541890">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state width="1638" height="18" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1604559853832" />
-    <state width="1636" height="277" key="GridCell.Tab.0.bottom/0.25.1680.1025@0.25.1680.1025" timestamp="1607522995460" />
-    <state width="1636" height="277" key="GridCell.Tab.0.center" timestamp="1607522995459">
+    <state width="1636" height="235" key="GridCell.Tab.0.bottom/0.25.1680.1025@0.25.1680.1025" timestamp="1607530541890" />
+    <state width="1636" height="235" key="GridCell.Tab.0.center" timestamp="1607530541890">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state width="1638" height="18" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1604559853831" />
-    <state width="1636" height="277" key="GridCell.Tab.0.center/0.25.1680.1025@0.25.1680.1025" timestamp="1607522995459" />
-    <state width="1636" height="277" key="GridCell.Tab.0.left" timestamp="1607522995459">
+    <state width="1636" height="235" key="GridCell.Tab.0.center/0.25.1680.1025@0.25.1680.1025" timestamp="1607530541890" />
+    <state width="1636" height="235" key="GridCell.Tab.0.left" timestamp="1607530541890">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state width="1638" height="18" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1604559853831" />
-    <state width="1636" height="277" key="GridCell.Tab.0.left/0.25.1680.1025@0.25.1680.1025" timestamp="1607522995459" />
-    <state width="1636" height="277" key="GridCell.Tab.0.right" timestamp="1607522995459">
+    <state width="1636" height="235" key="GridCell.Tab.0.left/0.25.1680.1025@0.25.1680.1025" timestamp="1607530541890" />
+    <state width="1636" height="235" key="GridCell.Tab.0.right" timestamp="1607530541890">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state width="1638" height="18" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1604559853832" />
-    <state width="1636" height="277" key="GridCell.Tab.0.right/0.25.1680.1025@0.25.1680.1025" timestamp="1607522995459" />
+    <state width="1636" height="235" key="GridCell.Tab.0.right/0.25.1680.1025@0.25.1680.1025" timestamp="1607530541890" />
     <state x="341" y="173" key="SettingsEditor" timestamp="1607514750537">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="341" y="173" key="SettingsEditor/0.25.1680.1025@0.25.1680.1025" timestamp="1607514750537" />
+    <state x="505" y="252" width="670" height="676" key="search.everywhere.popup" timestamp="1607530687558">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="505" y="252" width="670" height="676" key="search.everywhere.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1607530687558" />
   </component>
 </project>

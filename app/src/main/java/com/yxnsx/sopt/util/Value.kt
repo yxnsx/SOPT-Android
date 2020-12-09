@@ -1,8 +1,6 @@
 package com.yxnsx.sopt.util
 
 
-const val REQUEST_SIGN_UP = 100
-
 const val USER_DATA = "userData"
 const val USER_NAME = "userName"
 const val USER_EMAIL = "userEmail"

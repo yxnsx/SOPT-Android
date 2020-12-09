@@ -2,11 +2,12 @@ package com.yxnsx.sopt.week06.sopt_api
 
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.Field
 import retrofit2.http.Headers
 import retrofit2.http.POST
 
 
-interface SoptUserService {
+interface SoptUserApi {
 
     @Headers("Content-Type: application/json")
     @POST("/users/signin")

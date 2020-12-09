@@ -10,4 +10,4 @@ data class UserData(
     var subTitle: String,
     var date: String,
     var description: String
-): Parcelable
+) : Parcelable

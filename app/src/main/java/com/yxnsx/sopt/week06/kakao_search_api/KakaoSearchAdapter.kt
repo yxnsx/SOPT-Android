@@ -6,11 +6,10 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.yxnsx.sopt.R
 import com.yxnsx.sopt.databinding.ItemKakaoSearchBinding
-import com.yxnsx.sopt.util.KakaoSearchItemClickListener
+
 
 class KakaoSearchAdapter(
-    private val searchResultList: List<KakaoSearchModel.Document>,
-    private val clickListener: KakaoSearchItemClickListener
+    private val searchResultList: List<KakaoSearchModel.Document>
 ) : RecyclerView.Adapter<KakaoSearchAdapter.KakaoSearchViewHolder>() {
 
     override fun getItemCount() = searchResultList.size
@@ -27,13 +26,6 @@ class KakaoSearchAdapter(
 
     override fun onBindViewHolder(holder: KakaoSearchViewHolder, position: Int) {
         holder.dataBinding.searchResult = searchResultList[position]
-        holder.dataBinding.constraintLayoutItemContainer.setOnClickListener {
-
-            clickListener.onClickKakaoSearchItem(
-                holder.dataBinding.constraintLayoutItemContainer,
-                searchResultList[position]
-            )
-        }
     }
 
     inner class KakaoSearchViewHolder(

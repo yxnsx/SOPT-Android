@@ -21,7 +21,6 @@ class HomeActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
         setBottomNavigation()
     }
 
-
     private fun setViewPager() {
         viewPager.addOnPageChangeListener(this)
         viewPager.adapter = HomeViewPagerAdapter(supportFragmentManager)

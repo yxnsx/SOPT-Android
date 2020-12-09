@@ -11,7 +11,7 @@ import com.yxnsx.sopt.R
 import com.yxnsx.sopt.util.*
 import com.yxnsx.sopt.week06.sopt_api.RequestSignIn
 import com.yxnsx.sopt.week06.sopt_api.ResponseUserData
-import com.yxnsx.sopt.week06.sopt_api.SoptRetrofitClient
+import com.yxnsx.sopt.week06.sopt_api.SoptRetrofitObject
 import kotlinx.android.synthetic.main.activity_log_in.*
 import kotlinx.android.synthetic.main.activity_log_in.button_signUp
 import kotlinx.android.synthetic.main.activity_log_in.editText_email
@@ -20,7 +20,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class LogInActivity : AppCompatActivity() {
+class SignInActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -75,10 +75,10 @@ class LogInActivity : AppCompatActivity() {
         }
     }
 
-    private fun signInUserToServer(userId: String, userPassword: String) {
-        val call: Call<ResponseUserData> = SoptRetrofitClient.SOPT_USER_SERVICE.postSignIn(
-            RequestSignIn(userId, userPassword)
-        )
+    private fun signInUserToServer(email: String, password: String) {
+        val call: Call<ResponseUserData> =
+            SoptRetrofitObject.SOPT_USER_API.postSignIn(RequestSignIn(email, password))
+
         call.enqueue(object : Callback<ResponseUserData> {
             override fun onFailure(call: Call<ResponseUserData>, t: Throwable) {
                 Log.d("TAG", t.localizedMessage!!.toString())
@@ -124,5 +124,10 @@ class LogInActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+
+    companion object {
+        const val REQUEST_SIGN_UP = 100
     }
 }
