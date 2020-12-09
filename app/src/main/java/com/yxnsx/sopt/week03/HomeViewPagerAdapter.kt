@@ -12,7 +12,7 @@ class HomeViewPagerAdapter(fragmentManager: FragmentManager) :
     override fun getItem(position: Int): Fragment = when(position){
         0 -> BottomNavProfileFragment()
         1 -> BottomNavRecyclerViewFragment()
-        2 -> BottomNavEmptyFragment()
+        2 -> BottomNavKakaoSearchFragment()
         else -> throw IllegalStateException("Unexpected position: $position")
     }
 

@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.yxnsx.sopt.databinding.FragmentBottomNavKakaoSearchBinding
 
 
-class BottomNavkakaoSearchFragment : Fragment() {
+class BottomNavKakaoSearchFragment : Fragment() {
 
     lateinit var viewBinding: FragmentBottomNavKakaoSearchBinding
 
