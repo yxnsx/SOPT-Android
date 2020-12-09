@@ -1,6 +1,6 @@
 package com.yxnsx.sopt.week06.kakao_search_api
 
-data class ResponseKakaoSearch(
+data class KakaoSearchModel(
     val meta: Meta,
     val documents: List<Document>
 ) {

@@ -7,10 +7,11 @@
 
         <variable
             name="searchResult"
-            type="com.yxnsx.sopt.week06.kakao_search_api.ResponseKakaoSearch.Document" />
+            type="com.yxnsx.sopt.week06.kakao_search_api.KakaoSearchModel.Document" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_itemContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
