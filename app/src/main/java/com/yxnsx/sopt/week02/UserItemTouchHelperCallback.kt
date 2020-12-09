@@ -2,6 +2,7 @@ package com.yxnsx.sopt.week02
 
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
+import com.yxnsx.sopt.util.ProfileItemActionListener
 
 class UserItemTouchHelperCallback(private val profileItemActionListener: ProfileItemActionListener) : ItemTouchHelper.Callback() {
 

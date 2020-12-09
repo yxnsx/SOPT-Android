@@ -14,6 +14,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.yxnsx.sopt.R
 import com.yxnsx.sopt.databinding.FragmentBottomNavRecyclerViewBinding
+import com.yxnsx.sopt.util.ProfileItemActionListener
+import com.yxnsx.sopt.util.ProfileItemClickListener
+import com.yxnsx.sopt.util.ProfileItemDragListener
 import com.yxnsx.sopt.util.USER_DATA
 import com.yxnsx.sopt.week02.*
 

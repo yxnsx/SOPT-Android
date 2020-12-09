@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.yxnsx.sopt.*
+import com.yxnsx.sopt.util.ProfileItemClickListener
+import com.yxnsx.sopt.util.ProfileItemDragListener
 
 
 class UserAdapter(
