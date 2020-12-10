@@ -7,32 +7,34 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.yxnsx.sopt.week03.HomeActivity
-import com.yxnsx.sopt.R
+import com.yxnsx.sopt.databinding.ActivitySignInBinding
 import com.yxnsx.sopt.util.*
 import com.yxnsx.sopt.week06.sopt_api.RequestSignIn
 import com.yxnsx.sopt.week06.sopt_api.ResponseUserData
 import com.yxnsx.sopt.week06.sopt_api.SoptRetrofitObject
-import kotlinx.android.synthetic.main.activity_log_in.*
-import kotlinx.android.synthetic.main.activity_log_in.button_signUp
-import kotlinx.android.synthetic.main.activity_log_in.editText_email
-import kotlinx.android.synthetic.main.activity_log_in.editText_password
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class SignInActivity : AppCompatActivity() {
 
+    private lateinit var viewBinding: ActivitySignInBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_log_in)
 
-        // 버튼 클릭리스너 설정
-        button_logIn.setOnClickListener(onClickListener)
-        button_signUp.setOnClickListener(onClickListener)
+        // 뷰바인딩 적용
+        viewBinding = ActivitySignInBinding.inflate(layoutInflater)
+        setContentView(viewBinding.root)
 
-        // SharedPreferences 값 체크 후 저장된 userId 값이 있다면 자동로그인
-        checkSharedPreferences()
+        setListeners()
+        checkSharedPreferences() // SharedPreferences 값 체크 후 저장된 userId 값이 있다면 자동로그인
+    }
+
+    private fun setListeners() {
+        viewBinding.buttonSignIn.setOnClickListener(onClickListener)
+        viewBinding.textViewSignUp.setOnClickListener(onClickListener)
     }
 
     private fun checkSharedPreferences() {
@@ -48,12 +50,12 @@ class SignInActivity : AppCompatActivity() {
     }
 
     private val onClickListener = View.OnClickListener() {
-        when (it) {
-            button_logIn -> {
+        when (it.id) {
+            viewBinding.buttonSignIn.id -> {
                 // 폼 입력상태 체크
                 checkValidation()
             }
-            button_signUp -> {
+            viewBinding.textViewSignUp.id -> {
                 // SignUpActivity로 이동
                 val intent = Intent(this, SignUpActivity::class.java)
                 startActivityForResult(intent, REQUEST_SIGN_UP)
@@ -62,16 +64,16 @@ class SignInActivity : AppCompatActivity() {
     }
 
     private fun checkValidation() {
-        val userId = editText_email.text.toString()
-        val userPassword = editText_password.text.toString()
+        val email = viewBinding.editTextEmail.text.toString()
+        val password = viewBinding.editTextPassword.text.toString()
 
         // 모든 폼이 입력되지 않았을 경우,
-        if (userId.isEmpty() || userPassword.isEmpty()) {
+        if (email.isEmpty() || password.isEmpty()) {
             // 토스트 메시지 출력
             Toast.makeText(this, "아이디 또는 비밀번호가 입력되지 않았습니다.", Toast.LENGTH_SHORT).show()
 
         } else { // 모든 폼이 입력되었을 경우,
-            signInUserToServer(userId, userPassword)
+            signInUserToServer(email, password)
         }
     }
 
@@ -115,12 +117,12 @@ class SignInActivity : AppCompatActivity() {
 
                 REQUEST_SIGN_UP -> {
                     // 넘어온 인텐트에서 데이터 가져오기
-                    val userId = data?.getStringExtra(USER_EMAIL)
-                    val userPassword = data?.getStringExtra(USER_PASSWORD)
+                    val email = data?.getStringExtra(USER_EMAIL)
+                    val password = data?.getStringExtra(USER_PASSWORD)
 
                     // 가져온 데이터 바탕으로 editText에 값 설정
-                    editText_email.setText(userId)
-                    editText_password.setText(userPassword)
+                    viewBinding.editTextEmail.setText(email)
+                    viewBinding.editTextPassword.setText(password)
                 }
             }
         }

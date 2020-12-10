@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.yxnsx.sopt.R
+import com.yxnsx.sopt.databinding.ActivitySignUpBinding
 import com.yxnsx.sopt.util.USER_EMAIL
 import com.yxnsx.sopt.util.USER_NAME
 import com.yxnsx.sopt.util.USER_PASSWORD
@@ -21,12 +22,21 @@ import retrofit2.Response
 
 class SignUpActivity : AppCompatActivity() {
 
+    private lateinit var viewBinding: ActivitySignUpBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-        // 버튼 클릭리스너 설정
+        // 뷰바인딩 적용
+        viewBinding = ActivitySignUpBinding.inflate(layoutInflater)
+        setContentView(viewBinding.root)
+
+        setListeners()
+    }
+
+    private fun setListeners() {
         button_signUp.setOnClickListener(onClickListener)
     }
 
@@ -41,17 +51,17 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun checkValidation() {
 
-        val userName = editText_name.text.toString()
-        val userId = editText_email.text.toString()
-        val userPassword = editText_password.text.toString()
+        val name = viewBinding.editTextName.text.toString()
+        val email = viewBinding.editTextEmail.text.toString()
+        val password = viewBinding.editTextPassword.text.toString()
 
         // 모든 폼이 입력되지 않았을 경우,
-        if (userName.isEmpty() || userId.isEmpty() || userPassword.isEmpty()) {
+        if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
             // 토스트 메시지 츨력
             Toast.makeText(this, "모든 폼을 입력해주세요.", Toast.LENGTH_SHORT).show()
 
         } else { // 모든 폼이 입력되었을 경우,
-            signUpUserToServer(userId, userPassword, userName)
+            signUpUserToServer(email, password, name)
         }
     }
 
@@ -81,17 +91,17 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun passUserInfoToLoginActivity(
-        userName: String,
-        userId: String,
-        userPassword: String
+        name: String,
+        email: String,
+        password: String
     ) {
         // LogInActivity로 되돌아가는 인텐트 설정
         val intent = Intent(this, SignInActivity::class.java)
 
         // 인텐트로 넘길 데이터 설정
-        intent.putExtra(USER_NAME, userName)
-        intent.putExtra(USER_EMAIL, userId)
-        intent.putExtra(USER_PASSWORD, userPassword)
+        intent.putExtra(USER_NAME, name)
+        intent.putExtra(USER_EMAIL, email)
+        intent.putExtra(USER_PASSWORD, password)
         setResult(Activity.RESULT_OK, intent)
         finish()
     }
