@@ -5,10 +5,10 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".week03.BottomNavRecyclerViewFragment">
+    tools:context=".week03.BottomNavReqresListUsersFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/recyclerView_reqresListUsers"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,7 +25,7 @@
         android:layout_marginBottom="32dp"
         android:background="@color/colorPrimary"
         android:src="@drawable/icon_grid"
-        app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
-        app:layout_constraintEnd_toEndOf="@+id/recyclerView" />
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerView_reqresListUsers"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerView_reqresListUsers" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

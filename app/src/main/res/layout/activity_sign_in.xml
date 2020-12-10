@@ -59,23 +59,23 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_password" />
 
     <Button
-        android:id="@+id/button_logIn"
+        android:id="@+id/button_signIn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="로그인"
+        android:text="SIGN IN"
         app:layout_constraintEnd_toEndOf="@+id/editText_password"
         app:layout_constraintStart_toStartOf="@+id/editText_password"
         app:layout_constraintTop_toBottomOf="@+id/editText_password" />
 
-    <Button
-        android:id="@+id/button_signUp"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/textView_signUp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="회원가입"
-        app:layout_constraintEnd_toEndOf="@+id/button_logIn"
-        app:layout_constraintStart_toStartOf="@+id/button_logIn"
-        app:layout_constraintTop_toBottomOf="@+id/button_logIn" />
+        android:text="SIGN UP"
+        app:layout_constraintEnd_toEndOf="@+id/button_signIn"
+        app:layout_constraintStart_toStartOf="@+id/button_signIn"
+        app:layout_constraintTop_toBottomOf="@+id/button_signIn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
