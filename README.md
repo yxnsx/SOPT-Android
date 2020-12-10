@@ -1,6 +1,6 @@
 ## :fire: 27th ON SOPT Android assignment
 ### :sparkles: ScreenShots
-Demo video: https://vimeo.com/489379954
+* Demo video: https://vimeo.com/489379954
 ![무제 001](https://user-images.githubusercontent.com/47806943/101760919-df849d80-3b1e-11eb-8405-78bfcaaa5511.jpeg)
 ![무제 002](https://user-images.githubusercontent.com/47806943/101760955-eb705f80-3b1e-11eb-80e1-5a9befe1effa.jpeg)
 </br>
