@@ -8,7 +8,7 @@ import com.yxnsx.sopt.R
 import com.yxnsx.sopt.databinding.ItemReqresGridUserBinding
 import com.yxnsx.sopt.databinding.ItemReqresListUserBinding
 import com.yxnsx.sopt.util.ItemListeners
-import com.yxnsx.sopt.week02.reqres_api.ReqresListUsersModel
+import com.yxnsx.sopt.week06.reqres_api.ReqresListUsersModel
 
 
 class ReqresGridUsersAdapter(

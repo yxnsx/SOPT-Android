@@ -16,6 +16,7 @@ import com.yxnsx.sopt.util.ItemListeners
 import com.yxnsx.sopt.util.USER_DATA
 import com.yxnsx.sopt.week02.*
 import com.yxnsx.sopt.week02.reqres_api.*
+import com.yxnsx.sopt.week06.reqres_api.*
 
 
 class BottomNavReqresListUsersFragment : Fragment(), ItemListeners {
@@ -48,7 +49,10 @@ class BottomNavReqresListUsersFragment : Fragment(), ItemListeners {
         val api = ReqresListUsersApi()
         val repository =
             ReqresListUsersRepository(api)
-        reqresListUsersViewModelFactory = ReqresListUsersViewModelFactory(repository)
+        reqresListUsersViewModelFactory =
+            ReqresListUsersViewModelFactory(
+                repository
+            )
         reqresListUsersViewModel = ViewModelProvider(this, reqresListUsersViewModelFactory)
                 .get(ReqresListUsersViewModel::class.java)
     }

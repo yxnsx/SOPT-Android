@@ -1,4 +1,4 @@
-package com.yxnsx.sopt.week02.reqres_api
+package com.yxnsx.sopt.week06.reqres_api
 
 import com.yxnsx.sopt.util.BASE_URL_KAKAO_API
 import com.yxnsx.sopt.util.BASE_URL_REQRES_API

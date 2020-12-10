@@ -1,4 +1,4 @@
-package com.yxnsx.sopt.week02.reqres_api
+package com.yxnsx.sopt.week06.reqres_api
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

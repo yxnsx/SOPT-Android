@@ -8,7 +8,7 @@
 
         <variable
             name="listUsers"
-            type="com.yxnsx.sopt.week02.reqres_api.ReqresListUsersModel.Data" />
+            type="com.yxnsx.sopt.week06.reqres_api.ReqresListUsersModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

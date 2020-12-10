@@ -1,7 +1,7 @@
 package com.yxnsx.sopt.util
 
 import android.view.View
-import com.yxnsx.sopt.week02.reqres_api.ReqresListUsersModel
+import com.yxnsx.sopt.week06.reqres_api.ReqresListUsersModel
 
 
 interface ItemListeners {
