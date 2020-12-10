@@ -14,13 +14,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorWhite"
         tools:context=".week02.ReqresListUsersDetailActivity">
 
         <TextView
             android:id="@+id/textView_toolbar"
-            style="@style/dark_gray_regular_15sp"
+            style="@style/dark_gray_regular_18sp"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorWhite"
             android:gravity="center"
             android:text="프로필 상세"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +33,7 @@
             android:id="@+id/imageButton_backArrow"
             android:layout_width="?attr/actionBarSize"
             android:layout_height="?attr/actionBarSize"
-            android:background="@android:color/white"
+            android:background="@android:color/transparent"
             android:src="@drawable/icon_back_arrow"
             app:layout_constraintBottom_toBottomOf="@+id/textView_toolbar"
             app:layout_constraintStart_toStartOf="@+id/textView_toolbar"
@@ -43,7 +45,7 @@
             android:layout_height="0dp"
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:scaleType="centerCrop"
