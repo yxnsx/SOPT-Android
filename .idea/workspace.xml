@@ -27,12 +27,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab40240e-c418-4715-a785-838cad69a27e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/util/ItemListeners.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/util/ItemListeners.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week02/ReqresGridUsersAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week02/ReqresGridUsersAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week02/ReqresListUsersAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week02/ReqresListUsersAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week02/reqres_api/ReqresListUsersApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week06/reqres_api/ReqresListUsersApi.kt" afterDir="false" />
-    </list>
+    <list default="true" id="ab40240e-c418-4715-a785-838cad69a27e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
