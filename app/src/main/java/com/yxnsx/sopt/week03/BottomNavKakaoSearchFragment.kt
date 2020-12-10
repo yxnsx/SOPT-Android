@@ -18,7 +18,7 @@ import com.yxnsx.sopt.week06.kakao_search_api.*
 
 class BottomNavKakaoSearchFragment : Fragment() {
 
-    lateinit var viewBinding: FragmentBottomNavKakaoSearchBinding
+    private lateinit var viewBinding: FragmentBottomNavKakaoSearchBinding
     private lateinit var kakaoSearchViewModel: KakaoSearchViewModel
     private lateinit var kakaoSearchViewModelFactory: KakaoSearchViewModelFactory
 

@@ -3,12 +3,12 @@ package com.yxnsx.sopt.week02
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.yxnsx.sopt.databinding.ActivityProfileDetailBinding
+import com.yxnsx.sopt.databinding.ActivityReqresListUsersDetailBinding
 import com.yxnsx.sopt.util.USER_DATA
-import kotlinx.android.synthetic.main.activity_profile_detail.*
 
-class UserDetailActivity : AppCompatActivity() {
-    private lateinit var dataBinding: ActivityProfileDetailBinding
+
+class ReqresListUsersDetailActivity : AppCompatActivity() {
+    private lateinit var dataBinding: ActivityReqresListUsersDetailBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,13 +20,13 @@ class UserDetailActivity : AppCompatActivity() {
     }
 
     private fun setDataBinding() {
-        dataBinding = ActivityProfileDetailBinding.inflate(layoutInflater)
+        dataBinding = ActivityReqresListUsersDetailBinding.inflate(layoutInflater)
         setContentView(dataBinding.root)
     }
 
     private fun setUserData() {
         if (intent.hasExtra(USER_DATA)) {
-            dataBinding.profile = intent.getParcelableExtra(USER_DATA)
+            dataBinding.listUsers = intent.getParcelableExtra(USER_DATA)
         }
     }
 
@@ -35,8 +35,8 @@ class UserDetailActivity : AppCompatActivity() {
     }
 
     private val buttonClickListener = View.OnClickListener {
-        when (it) {
-            imageButton_backArrow -> {
+        when (it.id) {
+            dataBinding.imageButtonBackArrow.id -> {
                 onBackPressed()
             }
         }

@@ -16,7 +16,6 @@ interface KakaoSearchApi {
         "Content-Type: application/json",
         "Authorization: KakaoAK $KAKAO_SEARCH_API_KEY"
     )
-
     @GET("/v2/search/web")
     suspend fun getSearchResult(
         @Query("query") query: String

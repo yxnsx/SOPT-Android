@@ -1,9 +1,9 @@
 package com.yxnsx.sopt.util
 
 import android.view.View
-import com.yxnsx.sopt.week02.UserData
+import com.yxnsx.sopt.week02.reqres_api.ReqresListUsersModel
 
 
-interface ProfileItemClickListener {
-    fun onClickProfileItem(view: View, userData: UserData)
+interface ItemListeners {
+    fun onClickReqresListUsersItem(view: View, userData: ReqresListUsersModel.Data)
 }

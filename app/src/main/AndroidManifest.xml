@@ -16,7 +16,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
 
-        <activity android:name=".week02.UserDetailActivity" />
+        <activity android:name=".week02.ReqresListUsersDetailActivity" />
         <activity android:name=".week03.HomeActivity" />
         <activity android:name=".week01.SignUpActivity" />
         <activity android:name=".week01.SignInActivity">

@@ -12,7 +12,9 @@ abstract class KakaoSearchRequest {
         if (response.isSuccessful) {
             return response.body()!!
         } else {
-            throw ApiException(response.code().toString())
+            throw ApiException(
+                response.code().toString()
+            )
         }
     }
 }

@@ -13,7 +13,6 @@ class KakaoSearchAdapter(
 ) : RecyclerView.Adapter<KakaoSearchAdapter.KakaoSearchViewHolder>() {
 
     override fun getItemCount() = searchResultList.size
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         KakaoSearchViewHolder(
             DataBindingUtil.inflate(
