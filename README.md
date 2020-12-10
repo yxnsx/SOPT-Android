@@ -1,6 +1,6 @@
 ## :fire: 27th ON SOPT Android assignment
 * Demo video: https://vimeo.com/489379954
-* 주차별 디렉토리 보기: https://github.com/yxnsx/SOPT-Android/tree/master/app/src/main/java/com/yxnsx/sopt
+* 주차별 디렉토리: https://github.com/yxnsx/SOPT-Android/tree/master/app/src/main/java/com/yxnsx/sopt
 <br>
 
 ### :sparkles: ScreenShots
@@ -21,6 +21,6 @@
 * 2020/12/10 완료 </br>
 </br>
 
-#### :zap:[6주차 README] Server
+#### :zap:[[6주차 README] Server](https://github.com/yxnsx/SOPT-Android/blob/master/README_week06.md)
 * 2020/12/10 완료 </br>
 </br>
