@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listUsers"
+            type="com.yxnsx.sopt.week06.reqres_api.ReqresListUsersModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        tools:context=".week02.ReqresListUsersDetailActivity">
+
+        <TextView
+            android:id="@+id/textView_toolbar"
+            style="@style/dark_gray_regular_18sp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:text="프로필 상세"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton_backArrow"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_back_arrow"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_toolbar"
+            app:layout_constraintStart_toStartOf="@+id/textView_toolbar"
+            app:layout_constraintTop_toTopOf="@+id/textView_toolbar" />
+
+        <ImageView
+            android:id="@+id/imageView_userAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:scaleType="centerCrop"
+            app:bindDrawable="@{listUsers.avatar}"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_toolbar" />
+
+        <TextView
+            android:id="@+id/textView_userFirstName"
+            style="@style/dark_gray_bold_18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@{listUsers.first_name}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_userAvatar" />
+
+        <TextView
+            android:id="@+id/textView_userLastName"
+            style="@style/dark_gray_bold_18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:text="@{listUsers.last_name}"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_userFirstName"
+            app:layout_constraintStart_toEndOf="@+id/textView_userFirstName"
+            app:layout_constraintTop_toTopOf="@+id/textView_userFirstName" />
+
+        <TextView
+            android:id="@+id/textView_userEmail"
+            style="@style/dark_gray_regular_15sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{listUsers.email}"
+            app:layout_constraintEnd_toEndOf="@+id/imageView_userAvatar"
+            app:layout_constraintStart_toStartOf="@+id/textView_userFirstName"
+            app:layout_constraintTop_toBottomOf="@+id/textView_userFirstName" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

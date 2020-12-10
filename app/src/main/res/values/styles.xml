@@ -7,4 +7,61 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <!-- Text Styles -->
+    <style name="dark_gray_bold_18sp">
+        <item name="android:fontFamily">@font/spoqa_han_sans_bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorSoptDarkGray</item>
+    </style>
+
+    <style name="dark_gray_bold_12sp">
+        <item name="fontFamily">@font/spoqa_han_sans_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorSoptDarkGray</item>
+    </style>
+
+    <style name="dark_gray_regular_18sp">
+        <item name="android:fontFamily">@font/spoqa_han_sans_regular</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorSoptDarkGray</item>
+    </style>
+
+    <style name="dark_gray_regular_15sp">
+        <item name="android:fontFamily">@font/spoqa_han_sans_regular</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorSoptDarkGray</item>
+    </style>
+
+    <style name="dark_gray_regular_12sp">
+        <item name="android:fontFamily">@font/spoqa_han_sans_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorSoptDarkGray</item>
+    </style>
+
+    <style name="medium_gray_bold_18sp">
+        <item name="android:fontFamily">@font/spoqa_han_sans_bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorSoptMediumGray</item>
+    </style>
+
+    <style name="medium_gray_regular_12sp">
+        <item name="android:fontFamily">@font/spoqa_han_sans_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorSoptMediumGray</item>
+    </style>
+
+    <style name="light_gray_bold_12sp">
+        <item name="android:fontFamily">@font/spoqa_han_sans_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorSoptLightGray</item>
+    </style>
+
+    <style name="yellow_bold_18sp">
+        <item name="android:fontFamily">@font/spoqa_han_sans_bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorSoptYellow</item>
+    </style>
+
+
 </resources>

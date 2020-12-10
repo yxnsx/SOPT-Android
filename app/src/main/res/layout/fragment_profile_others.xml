@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorSoptLightGray"
     tools:context=".week03.ProfileOthersFragment">
 
     <TextView
+        style="@style/dark_gray_regular_12sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Others"

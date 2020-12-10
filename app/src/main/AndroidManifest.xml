@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.yxnsx.sopt">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
-        android:name=".week01.MyApplication"
+        android:name=".util.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".week03.MainActivity"/>
-        <activity android:name=".week02.ProfileDetailActivity" />
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+
+        <activity android:name=".week02.ReqresListUsersDetailActivity" />
         <activity android:name=".week03.HomeActivity" />
         <activity android:name=".week01.SignUpActivity" />
-        <activity android:name=".week01.LogInActivity">
+        <activity android:name=".week01.SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
