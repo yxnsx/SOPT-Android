@@ -75,8 +75,8 @@ override fun onClickReqresListUsersItem(view: View, userData: ReqresListUsersMod
 ```
 <br>
 
-#### :heavy_check_mark: 성장 과제 1: GridLayout 만들기
-* 필수 과제로 만든 아이템을 격자 형태로 바꾸기
+#### :heavy_check_mark: 성장 과제 1: `GridLayout` 만들기
+* 필수 과제로 만든 `RecyclerView` 아이템을 격자 형태로 바꾸기
 <br>
 
 `성장 과제 1 구현 코드 - ReqresGridUsersAdapter.kt`
