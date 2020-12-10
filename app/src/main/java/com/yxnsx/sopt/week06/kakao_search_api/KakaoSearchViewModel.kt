@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import com.yxnsx.sopt.util.Coroutines
 import kotlinx.coroutines.Job
 
+
 class KakaoSearchViewModel(
     private val repository: KakaoSearchRepository
 ) : ViewModel() {
