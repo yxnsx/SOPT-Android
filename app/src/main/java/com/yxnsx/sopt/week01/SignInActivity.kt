@@ -84,7 +84,7 @@ class SignInActivity : AppCompatActivity() {
         call.enqueue(object : Callback<ResponseUserData> {
             override fun onFailure(call: Call<ResponseUserData>, t: Throwable) {
                 Log.d("TAG", t.localizedMessage!!.toString())
-                Toast.makeText(applicationContext, "로그인에 실패헸습니다.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "로그인에 실패했습니다.", Toast.LENGTH_SHORT).show()
             }
 
             override fun onResponse(
@@ -102,7 +102,7 @@ class SignInActivity : AppCompatActivity() {
                         val intent = Intent(applicationContext, HomeActivity::class.java)
                         startActivity(intent)
 
-                        Toast.makeText(applicationContext, "로그인에 성공헸습니다.", Toast.LENGTH_SHORT)
+                        Toast.makeText(applicationContext, "성공적으로 로그인되었습니다.", Toast.LENGTH_SHORT)
                             .show()
                     }
             }

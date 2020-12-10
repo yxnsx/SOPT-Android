@@ -15,7 +15,7 @@ import com.yxnsx.sopt.databinding.FragmentBottomNavReqresListUsersBinding
 import com.yxnsx.sopt.util.ItemListeners
 import com.yxnsx.sopt.util.USER_DATA
 import com.yxnsx.sopt.week02.*
-import com.yxnsx.sopt.week02.reqres_api.*
+import com.yxnsx.sopt.week06.reqres_api.*
 
 
 class BottomNavReqresListUsersFragment : Fragment(), ItemListeners {
@@ -46,11 +46,10 @@ class BottomNavReqresListUsersFragment : Fragment(), ItemListeners {
 
     private fun setViewModel() {
         val api = ReqresListUsersApi()
-        val repository =
-            ReqresListUsersRepository(api)
+        val repository = ReqresListUsersRepository(api)
         reqresListUsersViewModelFactory = ReqresListUsersViewModelFactory(repository)
         reqresListUsersViewModel = ViewModelProvider(this, reqresListUsersViewModelFactory)
-                .get(ReqresListUsersViewModel::class.java)
+            .get(ReqresListUsersViewModel::class.java)
     }
 
     private fun setListeners() {
@@ -88,11 +87,7 @@ class BottomNavReqresListUsersFragment : Fragment(), ItemListeners {
                 viewBinding.recyclerViewReqresListUsers.also {
                     it.layoutManager = LinearLayoutManager(context)
                     it.setHasFixedSize(true)
-                    it.adapter =
-                        ReqresListUsersAdapter(
-                            reqresListUsers,
-                            this
-                        )
+                    it.adapter = ReqresListUsersAdapter(reqresListUsers, this)
                 }
             })
     }
@@ -104,11 +99,7 @@ class BottomNavReqresListUsersFragment : Fragment(), ItemListeners {
                 viewBinding.recyclerViewReqresListUsers.also {
                     it.layoutManager = GridLayoutManager(context, 2)
                     it.setHasFixedSize(true)
-                    it.adapter =
-                        ReqresGridUsersAdapter(
-                            reqresListUsers,
-                            this
-                        )
+                    it.adapter = ReqresGridUsersAdapter(reqresListUsers, this)
                 }
             })
     }

@@ -74,7 +74,7 @@ class SignUpActivity : AppCompatActivity() {
         call.enqueue(object : Callback<ResponseUserData> {
             override fun onFailure(call: Call<ResponseUserData>, t: Throwable) {
                 Log.d("TAG", t.localizedMessage!!.toString())
-                Toast.makeText(applicationContext, "회원가입에 실패헸습니다.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "회원가입에 실패했습니다.", Toast.LENGTH_SHORT).show()
             }
 
             override fun onResponse(
