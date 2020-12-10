@@ -7,11 +7,11 @@
 </br>
 </br>
 
-#### [:zap:[1주차 README] View와 ViewGroup](https://github.com/yxnsx/SOPT-Android/blob/master/README_week01.md)
+#### :zap:[[1주차 README] View와 ViewGroup](https://github.com/yxnsx/SOPT-Android/blob/master/README_week01.md)
 * 2020/10/12 완료 </br>
 </br>
 
-#### :zap:[2주차 README] RecyclerView
+#### :zap:[[2주차 README] RecyclerView](https://github.com/yxnsx/SOPT-Android/blob/master/README_week02.md)
 * 2020/12/10 완료 </br>
 </br>
 
