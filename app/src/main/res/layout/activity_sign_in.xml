@@ -6,76 +6,109 @@
     android:layout_height="match_parent"
     tools:context=".week01.SignInActivity">
 
-    <TextView
-        android:id="@+id/textView_title"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/imageView_logo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="64dp"
-        android:text="SOPT"
-        android:textSize="42sp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="94dp"
+        android:layout_marginLeft="94dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginRight="94dp"
+        android:src="@drawable/logo_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView_email"
-        android:layout_width="wrap_content"
+        style="@style/dark_gray_bold_12sp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         android:text="이메일"
-        android:textSize="21sp"
-        app:layout_constraintStart_toStartOf="@+id/textView_title"
-        app:layout_constraintTop_toBottomOf="@+id/textView_title" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_logo" />
 
     <EditText
         android:id="@+id/editText_email"
+        style="@style/dark_gray_regular_12sp"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selector_edit_text"
         android:hint="이메일을 입력해주세요."
-        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingLeft="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView_email"
         app:layout_constraintStart_toStartOf="@+id/textView_email"
         app:layout_constraintTop_toBottomOf="@+id/textView_email" />
 
     <TextView
         android:id="@+id/textView_password"
-        android:layout_width="wrap_content"
+        style="@style/dark_gray_bold_12sp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="비밀번호"
-        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="@+id/editText_email"
         app:layout_constraintStart_toStartOf="@+id/editText_email"
         app:layout_constraintTop_toBottomOf="@+id/editText_email" />
 
     <EditText
         android:id="@+id/editText_password"
+        style="@style/dark_gray_regular_12sp"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selector_edit_text"
         android:hint="비밀번호를 입력해주세요."
+        android:paddingLeft="16dp"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/editText_email"
-        app:layout_constraintStart_toStartOf="@+id/textView_email"
+        app:layout_constraintEnd_toEndOf="@+id/textView_password"
+        app:layout_constraintStart_toStartOf="@+id/textView_password"
         app:layout_constraintTop_toBottomOf="@+id/textView_password" />
 
     <Button
         android:id="@+id/button_signIn"
+        style="@style/yellow_bold_18sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/background_button"
         android:text="SIGN IN"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editText_password"
-        app:layout_constraintStart_toStartOf="@+id/editText_password"
-        app:layout_constraintTop_toBottomOf="@+id/editText_password" />
+        app:layout_constraintStart_toStartOf="@+id/editText_password" />
 
     <TextView
-        android:id="@+id/textView_signUp"
+        android:id="@+id/textView_signUpGuide"
+        style="@style/medium_gray_regular_12sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="SIGN UP"
-        app:layout_constraintEnd_toEndOf="@+id/button_signIn"
+        android:layout_marginRight="4dp"
+        android:text="아직 계정이 없으신가요?"
+        app:layout_constraintEnd_toStartOf="@+id/textView_signUp"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="@+id/button_signIn"
+        app:layout_constraintTop_toBottomOf="@+id/button_signIn" />
+
+    <TextView
+        android:id="@+id/textView_signUp"
+        style="@style/dark_gray_bold_12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:text="Sign Up"
+        app:layout_constraintEnd_toEndOf="@+id/button_signIn"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/textView_signUpGuide"
         app:layout_constraintTop_toBottomOf="@+id/button_signIn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

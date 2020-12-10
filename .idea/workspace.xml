@@ -27,7 +27,32 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab40240e-c418-4715-a785-838cad69a27e" name="Default Changelist" comment="" />
+    <list default="true" id="ab40240e-c418-4715-a785-838cad69a27e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week01/SignUpActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week01/SignUpActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/color/selector_botton_nav.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/color/selector_botton_nav.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/emoji_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/emoji_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/emoji_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/emoji_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/emoji_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/emoji_07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/emoji_08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/emoji_09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/emoji_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_reqres_list_users_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_reqres_list_users_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bottom_nav_kakao_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bottom_nav_kakao_search.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bottom_nav_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bottom_nav_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bottom_nav_reqres_list_users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bottom_nav_reqres_list_users.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_kakao_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_kakao_search.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_reqres_grid_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_reqres_grid_user.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_reqres_list_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_reqres_list_user.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,9 +82,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="resourceFile" />
         <option value="Class" />
         <option value="Kotlin File" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -80,7 +105,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android-custom-view/Users/613/Library/Android/sdk/sources/android-30/android/widget/ImageView.java_SELECTED" value="ImageView" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="memory.settings.postsync.last.time.stamp" value="1604557919418" />
     <property name="multi-representation-preview/Users/613/Library/Android/sdk/sources/android-30/android/widget/ImageView.java_selected" value="Custom views" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -105,6 +130,8 @@
       <recent name="com.yxnsx.sopt.week03" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/font" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/week06/reqres_api" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/yxnsx/sopt/util" />
@@ -215,47 +242,52 @@
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="508" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1607529942206" />
-    <state x="578" y="291" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607534066846">
+    <state x="578" y="291" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607579929044">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="578" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1604566000785" />
-    <state x="578" y="291" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1607534066846" />
+    <state x="578" y="291" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1607579929044" />
     <state x="614" y="198" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1607536719440">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="614" y="196" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1604560061708" />
     <state x="614" y="198" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1607536719440" />
-    <state x="428" y="298" key="AndroidCreateResourceFileDialog" timestamp="1604130974148">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="428" y="296" key="AndroidCreateResourceDirectoryDialog" timestamp="1607581570768">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="428" y="296" key="AndroidCreateResourceDirectoryDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1607581570768" />
+    <state x="428" y="299" key="AndroidCreateResourceFileDialog" timestamp="1607582553869">
+      <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="428" y="298" key="AndroidCreateResourceFileDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1604130974148" />
-    <state width="1636" height="277" key="GridCell.Tab.0.bottom" timestamp="1607574237748">
+    <state x="428" y="299" key="AndroidCreateResourceFileDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1607582553869" />
+    <state width="1636" height="235" key="GridCell.Tab.0.bottom" timestamp="1607588118267">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state width="1638" height="18" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1604559853832" />
-    <state width="1636" height="277" key="GridCell.Tab.0.bottom/0.25.1680.1025@0.25.1680.1025" timestamp="1607574237748" />
-    <state width="1636" height="277" key="GridCell.Tab.0.center" timestamp="1607574237746">
+    <state width="1636" height="235" key="GridCell.Tab.0.bottom/0.25.1680.1025@0.25.1680.1025" timestamp="1607588118267" />
+    <state width="1636" height="235" key="GridCell.Tab.0.center" timestamp="1607588118266">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state width="1638" height="18" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1604559853831" />
-    <state width="1636" height="277" key="GridCell.Tab.0.center/0.25.1680.1025@0.25.1680.1025" timestamp="1607574237746" />
-    <state width="1636" height="277" key="GridCell.Tab.0.left" timestamp="1607574237744">
+    <state width="1636" height="235" key="GridCell.Tab.0.center/0.25.1680.1025@0.25.1680.1025" timestamp="1607588118266" />
+    <state width="1636" height="235" key="GridCell.Tab.0.left" timestamp="1607588118266">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state width="1638" height="18" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1604559853831" />
-    <state width="1636" height="277" key="GridCell.Tab.0.left/0.25.1680.1025@0.25.1680.1025" timestamp="1607574237744" />
-    <state width="1636" height="277" key="GridCell.Tab.0.right" timestamp="1607574237747">
+    <state width="1636" height="235" key="GridCell.Tab.0.left/0.25.1680.1025@0.25.1680.1025" timestamp="1607588118266" />
+    <state width="1636" height="235" key="GridCell.Tab.0.right" timestamp="1607588118266">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state width="1638" height="18" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1604559853832" />
-    <state width="1636" height="277" key="GridCell.Tab.0.right/0.25.1680.1025@0.25.1680.1025" timestamp="1607574237747" />
+    <state width="1636" height="235" key="GridCell.Tab.0.right/0.25.1680.1025@0.25.1680.1025" timestamp="1607588118266" />
     <state x="341" y="173" key="SettingsEditor" timestamp="1607514750537">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="341" y="173" key="SettingsEditor/0.25.1680.1025@0.25.1680.1025" timestamp="1607514750537" />
-    <state x="505" y="252" width="670" height="676" key="search.everywhere.popup" timestamp="1607535921400">
+    <state x="505" y="252" width="670" height="676" key="search.everywhere.popup" timestamp="1607586159419">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
-    <state x="505" y="252" width="670" height="676" key="search.everywhere.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1607535921400" />
+    <state x="505" y="252" width="670" height="676" key="search.everywhere.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1607586159419" />
   </component>
 </project>

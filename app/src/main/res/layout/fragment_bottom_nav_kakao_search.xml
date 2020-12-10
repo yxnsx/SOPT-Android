@@ -9,11 +9,14 @@
 
     <EditText
         android:id="@+id/editText_search"
+        style="@style/dark_gray_regular_12sp"
+        android:paddingLeft="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:background="@drawable/selector_edit_text"
         android:hint="검색어를 입력해주세요"
         android:imeOptions="actionSearch"
         android:inputType="text"
@@ -25,23 +28,13 @@
         android:id="@+id/imageButton_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="@android:color/transparent"
         android:src="@drawable/icon_search"
         app:layout_constraintBottom_toBottomOf="@+id/editText_search"
         app:layout_constraintEnd_toEndOf="@+id/editText_search"
         app:layout_constraintTop_toTopOf="@+id/editText_search" />
-
-    <TextView
-        android:id="@+id/textView_searchResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text=""
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_searchResultContainer"

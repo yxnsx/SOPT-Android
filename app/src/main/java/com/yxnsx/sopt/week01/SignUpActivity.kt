@@ -41,8 +41,8 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private val onClickListener = View.OnClickListener {
-        when (it) {
-            button_signUp -> {
+        when (it.id) {
+            viewBinding.buttonSignUp.id -> {
                 // 폼 입력상태 체크
                 checkValidation()
             }
@@ -54,6 +54,8 @@ class SignUpActivity : AppCompatActivity() {
         val name = viewBinding.editTextName.text.toString()
         val email = viewBinding.editTextEmail.text.toString()
         val password = viewBinding.editTextPassword.text.toString()
+
+        Log.d("TAG", "checkValidation: $name + $email + $password")
 
         // 모든 폼이 입력되지 않았을 경우,
         if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {

@@ -17,6 +17,7 @@
 
         <TextView
             android:id="@+id/textView_resultTitle"
+            style="@style/dark_gray_regular_15sp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -25,13 +26,13 @@
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:text="@{searchResult.title}"
-            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView_resultContents"
+            style="@style/dark_gray_regular_12sp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -39,7 +40,6 @@
             android:ellipsize="end"
             android:maxLines="3"
             android:text="@{searchResult.contents}"
-            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/textView_resultTitle"
             app:layout_constraintStart_toStartOf="@+id/textView_resultTitle"
