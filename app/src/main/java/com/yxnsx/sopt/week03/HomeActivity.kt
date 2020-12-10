@@ -37,7 +37,7 @@ class HomeActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
             when (it.itemId) {
                 R.id.menu_profile -> index = 0
                 R.id.menu_list -> index = 1
-                R.id.menu_empty -> index = 2
+                R.id.menu_search -> index = 2
             }
             viewPager.currentItem = index
             true
