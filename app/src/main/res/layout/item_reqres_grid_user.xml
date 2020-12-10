@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="listUsers"
+            type="com.yxnsx.sopt.week02.reqres_api.ReqresListUsersModel.Data" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView_userAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:bindDrawable="@{listUsers.avatar}"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_userFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{listUsers.first_name}"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/imageView_userAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_userAvatar" />
+
+        <TextView
+            android:id="@+id/textView_userLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{listUsers.last_name}"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_userFirstName"
+            app:layout_constraintStart_toEndOf="@+id/textView_userFirstName"
+            app:layout_constraintTop_toTopOf="@+id/textView_userFirstName" />
+
+        <TextView
+            android:id="@+id/textView_userEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{listUsers.email}"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView_userAvatar"
+            app:layout_constraintStart_toEndOf="@+id/imageView_userAvatar"
+            app:layout_constraintStart_toStartOf="@+id/textView_userFirstName"
+            app:layout_constraintTop_toBottomOf="@+id/textView_userFirstName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
