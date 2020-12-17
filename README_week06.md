@@ -145,7 +145,7 @@ private fun signUpUserToServer(email: String, password: String, name: String) {
 <br>
 
 #### :heavy_check_mark: 성장 과제 1: 더미데이터 API 구현
-* https://reqres.in/_ `LIST USERS` API 구현하기
+* https://reqres.in/ `LIST USERS` API 구현하기
 * `RecycerView`로 통신 결과 출력하기
 <br>
 
